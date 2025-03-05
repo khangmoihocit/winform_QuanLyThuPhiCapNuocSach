@@ -78,7 +78,33 @@ namespace GUI
             }
         }
 
-        
+        //chuyển các textbox về đối tượng hóa đơn
+        private HoaDonDTO getValueTextBoxes()
+        {
+            HoaDonDTO hoaDonDTO = new HoaDonDTO();
+            hoaDonDTO.TenKhachHang = txtTenKhachHang.Text;
+            if (!string.IsNullOrEmpty(txtHoaDonThang.Text) && !string.IsNullOrEmpty(txtHoaDonNam.Text))
+            {
+                hoaDonDTO.HdThang = int.Parse(txtHoaDonThang.Text);
+                hoaDonDTO.HdNam = int.Parse(txtHoaDonNam.Text);
+            }
+
+            if (cboTrangThaiThanhToan.SelectedItem != null)
+            {
+                if (cboTrangThaiThanhToan.SelectedItem.ToString().Equals("Đã thanh toán"))
+                {
+                    hoaDonDTO.TrangThaiThanhToan = 1;
+                }
+                else
+                {
+                    hoaDonDTO.TrangThaiThanhToan = 0;
+                }
+            }
+
+            hoaDonDTO.NgayLapHD = dtpNgayLapHD.Value;
+            return hoaDonDTO;
+        }
+
         //
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
@@ -86,7 +112,7 @@ namespace GUI
             param["sHoTen"] = txtTenKhachHang.Text;
             param["iThang"] = txtHoaDonThang.Text;
             param["iNam"] = txtHoaDonNam.Text;
-            if(cboTrangThaiThanhToan.SelectedItem != null)
+            if (cboTrangThaiThanhToan.SelectedItem != null)
             {
                 if (cboTrangThaiThanhToan.SelectedItem.ToString().Equals("Đã thanh toán"))
                 {
@@ -97,15 +123,16 @@ namespace GUI
                     param["sTrangThai"] = 0;
                 }
             }
-            
-            if(checkbox_ngaylaphd.Checked == true)
+
+            if (checkbox_ngaylaphd.Checked == true)
             {
                 param["dNgayLap"] = dtpNgayLapHD.Value.ToString("yyyy/MM/dd");
             }
             try
             {
                 dgvHoaDon.DataSource = hoaDonBUS.findAll(param);
-            }catch(DatabaseException ex)
+            }
+            catch (DatabaseException ex)
             {
                 MessageBox.Show(ex.Message);
             }
