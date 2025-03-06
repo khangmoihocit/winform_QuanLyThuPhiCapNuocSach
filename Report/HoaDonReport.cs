@@ -26,7 +26,7 @@ namespace Report
 
             TableLogOnInfo tableLogonInfo = new TableLogOnInfo();
             tableLogonInfo.ConnectionInfo.ServerName = "KHANG\\SQLEXPRESS02";
-            tableLogonInfo.ConnectionInfo.DatabaseName = "QuanLyThuPhiNuocSach";
+            tableLogonInfo.ConnectionInfo.DatabaseName = "QuanLyThuPhiCapNuocSach";
             tableLogonInfo.ConnectionInfo.UserID = "khang";
             tableLogonInfo.ConnectionInfo.Password = "123";
 
