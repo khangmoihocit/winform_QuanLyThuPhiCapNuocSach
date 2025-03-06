@@ -308,5 +308,10 @@ namespace GUI
             LoadData(); // Cập nhật DataGridView
             MessageBox.Show("Thêm thành công");
         }
+
+        private void btnAdd_Click_2(object sender, EventArgs e)
+        {
+
+        }
     }
 }
