@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -12,10 +13,14 @@ namespace DAO.impl
 {
     public class NhanVienDAOImpl : INhanVienDAO
     {
-        public List<NhanVienDTO> nhanVienDTOs()
+        public List<NhanVienDTO> findById(int maNhanVien)
+        {
+            return command($"select * from tblNhanVien where iMaNV = {maNhanVien}");
+        }
+
+        public List<NhanVienDTO> command(string query)
         {
             List<NhanVienDTO> nhanVienDTOs = new List<NhanVienDTO>();
-            string query = "select * from tblNhanVien";
 
             using(SqlConnection sqlConnection = Connection.GetSqlConnection())
             {
@@ -47,6 +52,32 @@ namespace DAO.impl
             }
 
             return nhanVienDTOs;
+        }
+
+        public List<NhanVienDTO> getAll()
+        {
+            return command("select * from tblNhanVien");
+        }
+
+        public DataTable getAllByTable()
+        {
+            string query = "spNhanVien_Get";
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                sqlConnection.Open();
+                using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                {
+                    sqlCommand.CommandType = CommandType.StoredProcedure;
+                    using(SqlDataAdapter dataAdapter = new SqlDataAdapter(sqlCommand))
+                    {
+                        DataTable dataTable = new DataTable();
+                        dataAdapter.Fill(dataTable);
+
+                        return dataTable;
+                    }
+                }//cmd
+                sqlConnection.Close();
+            }
         }
     }
 }

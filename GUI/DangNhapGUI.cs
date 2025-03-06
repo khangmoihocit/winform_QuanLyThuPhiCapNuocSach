@@ -48,9 +48,10 @@ namespace GUI
                     if (taiKhoanDTOs.Count > 0)
                     {
                         DialogResult re = MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        
                         if (re == DialogResult.OK)
                         {
-                            TrangChuGUI trangChuGUI = new TrangChuGUI();
+                            TrangChuGUI trangChuGUI = new TrangChuGUI(taiKhoanDTOs[0]);
                             trangChuGUI.Show();
                             this.Hide();
                         }
@@ -67,6 +68,10 @@ namespace GUI
             }//else
         }
 
+        public TaiKhoanDTO getTaiKhoanDTO()
+        {
+            return null;
+        }
 
         private void DangNhapGUI_Load_1(object sender, EventArgs e)
         {

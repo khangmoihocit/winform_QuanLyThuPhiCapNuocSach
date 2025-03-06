@@ -7,13 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
 
 namespace GUI
 {
     public partial class NhanVienGUI : Form
     {
+        private NhanVienBUS nhanVienBUS;
         public NhanVienGUI()
         {
+            nhanVienBUS = new NhanVienBUS();
             InitializeComponent();
         }
 
@@ -25,6 +28,16 @@ namespace GUI
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void NhanVienGUI_Load(object sender, EventArgs e)
+        {
+            dgvNhanVien.DataSource = nhanVienBUS.getAllByDataTable();
         }
     }
 }

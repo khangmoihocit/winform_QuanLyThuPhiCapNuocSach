@@ -45,9 +45,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IChiSoNuocDAO.cs" />
     <Compile Include="IHoaDonDAO.cs" />
+    <Compile Include="IKhachHangDAO.cs" />
+    <Compile Include="Impl\ChiSoNuocDAOImpl.cs" />
     <Compile Include="Impl\Connection.cs" />
     <Compile Include="Impl\HoaDonDAOImpl.cs" />
+    <Compile Include="Impl\KhachHangDAOImpl.cs" />
     <Compile Include="Impl\NhanVienDAOImpl.cs" />
     <Compile Include="Impl\TaiKhoanDAOImpl.cs" />
     <Compile Include="INhanVienDAO.cs" />

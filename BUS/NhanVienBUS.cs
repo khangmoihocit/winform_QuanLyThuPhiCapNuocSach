@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,15 @@ namespace BUS
 
         public NhanVienBUS() => nhanVienDAO = new NhanVienDAOImpl();
 
-        public List<NhanVienDTO> nhanVienDTOs() => nhanVienDAO.nhanVienDTOs();
+        public List<NhanVienDTO> nhanVienDTOs() => nhanVienDAO.getAll();
+        public List<NhanVienDTO> findById(int maNhanVien) => nhanVienDAO.findById(maNhanVien);
+        public DataTable getAllByDataTable()
+        {
+            return nhanVienDAO.getAllByTable();
+        }
+        public List<NhanVienDTO> getAll()
+        {
+            return nhanVienDAO.getAll();
+        }
     }
 }

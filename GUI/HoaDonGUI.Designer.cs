@@ -33,6 +33,7 @@ namespace GUI
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.checkbox_ngaylaphd = new System.Windows.Forms.CheckBox();
             this.btnXuatHoaDon = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -52,7 +53,6 @@ namespace GUI
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvHoaDon = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -81,8 +81,18 @@ namespace GUI
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1330, 242);
+            this.panel1.Size = new System.Drawing.Size(1330, 236);
             this.panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.AutoSize = true;
+            this.button1.Location = new System.Drawing.Point(1056, 187);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(99, 34);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Làm mới";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // checkbox_ngaylaphd
             // 
@@ -232,9 +242,9 @@ namespace GUI
             // 
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 242);
+            this.panel2.Location = new System.Drawing.Point(0, 236);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1330, 518);
+            this.panel2.Size = new System.Drawing.Size(1330, 524);
             this.panel2.TabIndex = 1;
             // 
             // panel3
@@ -243,7 +253,7 @@ namespace GUI
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1330, 518);
+            this.panel3.Size = new System.Drawing.Size(1330, 524);
             this.panel3.TabIndex = 0;
             // 
             // groupBox1
@@ -252,7 +262,7 @@ namespace GUI
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1330, 518);
+            this.groupBox1.Size = new System.Drawing.Size(1330, 524);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách hóa đơn";
@@ -268,18 +278,8 @@ namespace GUI
             this.dgvHoaDon.ReadOnly = true;
             this.dgvHoaDon.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvHoaDon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHoaDon.Size = new System.Drawing.Size(1324, 487);
+            this.dgvHoaDon.Size = new System.Drawing.Size(1324, 493);
             this.dgvHoaDon.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.AutoSize = true;
-            this.button1.Location = new System.Drawing.Point(1056, 187);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 34);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Làm mới";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // HoaDonGUI
             // 

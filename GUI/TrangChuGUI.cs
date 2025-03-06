@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
+using DTO;
 
 namespace GUI
 {
     public partial class TrangChuGUI : Form
     {
-        public TrangChuGUI()
+        private NhanVienBUS nhanVienBUS;
+        private TaiKhoanDTO taiKhoanDTO;
+        public TrangChuGUI(TaiKhoanDTO taiKhoanDTO)
         {
             InitializeComponent();
+            nhanVienBUS = new NhanVienBUS();
+            this.taiKhoanDTO = taiKhoanDTO;
         }
 
         private Form currentFormChild;
@@ -42,21 +48,7 @@ namespace GUI
             childForm.Show();
         }
 
-        
-
-
-
-        private void TrangChuGUI_Load(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void btnTongQuan_Click(object sender, EventArgs e)
-        {
-            openChildForm(new TongQuanGUI());
-            lblHeader.Text = "Tổng quan";
-        }
+      
 
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
@@ -116,6 +108,12 @@ namespace GUI
         private void TrangChuGUI_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void TrangChuGUI_Load_1(object sender, EventArgs e)
+        {
+            NhanVienDTO nhanVienDTO = nhanVienBUS.findById(taiKhoanDTO.MaNhanVien)[0];
+            lblUsername.Text = "Xin chào! " + nhanVienDTO.HoTen;
         }
     }
 }

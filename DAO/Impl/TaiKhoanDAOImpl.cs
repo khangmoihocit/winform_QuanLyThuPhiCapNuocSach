@@ -32,8 +32,9 @@ namespace DAO.impl
                                 TaiKhoanDTO taiKhoanDTO = new TaiKhoanDTO(
                                       dataReader["sTenTaiKhoan"].ToString(), 
                                       dataReader["sMatKhau"].ToString(),
-                                      dataReader["sEmail"].ToString());
-
+                                      dataReader["sEmail"].ToString(),
+                                      int.Parse(dataReader["iMaNV"].ToString())
+                                      );
                                 taiKhoanDTOs.Add(taiKhoanDTO);
                             }
                         }

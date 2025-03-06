@@ -39,18 +39,28 @@ namespace GUI
             this.btnNhanVien = new System.Windows.Forms.Button();
             this.btnTrangChu = new System.Windows.Forms.Button();
             this.btnDangXuat = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblHeader = new System.Windows.Forms.Label();
             this.panel_Body = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblUsername = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.btnThongkeVaBaocao);
             this.panel1.Controls.Add(this.btnHoaDon);
             this.panel1.Controls.Add(this.btnQuanLySuDungNuoc);
@@ -62,7 +72,7 @@ namespace GUI
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(261, 885);
+            this.panel1.Size = new System.Drawing.Size(216, 885);
             this.panel1.TabIndex = 2;
             // 
             // btnThongkeVaBaocao
@@ -70,7 +80,7 @@ namespace GUI
             this.btnThongkeVaBaocao.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnThongkeVaBaocao.Location = new System.Drawing.Point(0, 381);
             this.btnThongkeVaBaocao.Name = "btnThongkeVaBaocao";
-            this.btnThongkeVaBaocao.Size = new System.Drawing.Size(261, 64);
+            this.btnThongkeVaBaocao.Size = new System.Drawing.Size(216, 64);
             this.btnThongkeVaBaocao.TabIndex = 12;
             this.btnThongkeVaBaocao.Text = "Thống kế và báo cáo";
             this.btnThongkeVaBaocao.UseVisualStyleBackColor = true;
@@ -81,7 +91,7 @@ namespace GUI
             this.btnHoaDon.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnHoaDon.Location = new System.Drawing.Point(0, 325);
             this.btnHoaDon.Name = "btnHoaDon";
-            this.btnHoaDon.Size = new System.Drawing.Size(261, 56);
+            this.btnHoaDon.Size = new System.Drawing.Size(216, 56);
             this.btnHoaDon.TabIndex = 11;
             this.btnHoaDon.Text = "Hóa đơn";
             this.btnHoaDon.UseVisualStyleBackColor = true;
@@ -92,7 +102,7 @@ namespace GUI
             this.btnQuanLySuDungNuoc.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnQuanLySuDungNuoc.Location = new System.Drawing.Point(0, 265);
             this.btnQuanLySuDungNuoc.Name = "btnQuanLySuDungNuoc";
-            this.btnQuanLySuDungNuoc.Size = new System.Drawing.Size(261, 60);
+            this.btnQuanLySuDungNuoc.Size = new System.Drawing.Size(216, 60);
             this.btnQuanLySuDungNuoc.TabIndex = 10;
             this.btnQuanLySuDungNuoc.Text = "Quản lý sử dụng nước";
             this.btnQuanLySuDungNuoc.UseVisualStyleBackColor = true;
@@ -103,7 +113,7 @@ namespace GUI
             this.btnKhachHang.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnKhachHang.Location = new System.Drawing.Point(0, 206);
             this.btnKhachHang.Name = "btnKhachHang";
-            this.btnKhachHang.Size = new System.Drawing.Size(261, 59);
+            this.btnKhachHang.Size = new System.Drawing.Size(216, 59);
             this.btnKhachHang.TabIndex = 9;
             this.btnKhachHang.Text = "Khách hàng";
             this.btnKhachHang.UseVisualStyleBackColor = true;
@@ -114,7 +124,7 @@ namespace GUI
             this.btnNhanVien.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNhanVien.Location = new System.Drawing.Point(0, 146);
             this.btnNhanVien.Name = "btnNhanVien";
-            this.btnNhanVien.Size = new System.Drawing.Size(261, 60);
+            this.btnNhanVien.Size = new System.Drawing.Size(216, 60);
             this.btnNhanVien.TabIndex = 8;
             this.btnNhanVien.Text = "Nhân viên";
             this.btnNhanVien.UseVisualStyleBackColor = true;
@@ -125,7 +135,7 @@ namespace GUI
             this.btnTrangChu.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTrangChu.Location = new System.Drawing.Point(0, 78);
             this.btnTrangChu.Name = "btnTrangChu";
-            this.btnTrangChu.Size = new System.Drawing.Size(261, 68);
+            this.btnTrangChu.Size = new System.Drawing.Size(216, 68);
             this.btnTrangChu.TabIndex = 7;
             this.btnTrangChu.Text = "Trang chủ";
             this.btnTrangChu.UseVisualStyleBackColor = true;
@@ -136,29 +146,20 @@ namespace GUI
             this.btnDangXuat.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnDangXuat.Location = new System.Drawing.Point(0, 819);
             this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.Size = new System.Drawing.Size(261, 66);
+            this.btnDangXuat.Size = new System.Drawing.Size(216, 66);
             this.btnDangXuat.TabIndex = 6;
             this.btnDangXuat.Text = "Đăng xuất";
             this.btnDangXuat.UseVisualStyleBackColor = true;
             this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(261, 78);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.lblHeader);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(261, 0);
+            this.panel2.Location = new System.Drawing.Point(216, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1348, 78);
+            this.panel2.Size = new System.Drawing.Size(1393, 78);
             this.panel2.TabIndex = 3;
             // 
             // lblHeader
@@ -177,10 +178,68 @@ namespace GUI
             // 
             this.panel_Body.BackColor = System.Drawing.Color.SteelBlue;
             this.panel_Body.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_Body.Location = new System.Drawing.Point(261, 78);
+            this.panel_Body.Location = new System.Drawing.Point(216, 78);
             this.panel_Body.Name = "panel_Body";
-            this.panel_Body.Size = new System.Drawing.Size(1348, 807);
+            this.panel_Body.Size = new System.Drawing.Size(1393, 807);
             this.panel_Body.TabIndex = 4;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox1.Image = global::GUI.Properties.Resources.pngegg;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(216, 78);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.panel5);
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(216, 78);
+            this.panel3.TabIndex = 13;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.pictureBox2);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(216, 42);
+            this.panel4.TabIndex = 0;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.lblUsername);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(0, 42);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(216, 36);
+            this.panel5.TabIndex = 1;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = global::GUI.Properties.Resources.pngegg;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(216, 42);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // lblUsername
+            // 
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.Location = new System.Drawing.Point(3, 3);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(155, 24);
+            this.lblUsername.TabIndex = 0;
+            this.lblUsername.Text = "Xin chào! Admin";
             // 
             // TrangChuGUI
             // 
@@ -199,10 +258,16 @@ namespace GUI
             this.Text = "Quản ly thu phí cấp nước sạch";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TrangChuGUI_FormClosing);
+            this.Load += new System.EventHandler(this.TrangChuGUI_Load_1);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -211,7 +276,6 @@ namespace GUI
 
         private Panel panel1;
         private Panel panel2;
-        private PictureBox pictureBox1;
         private Panel panel_Body;
         private Button btnDangXuat;
         private Button btnKhachHang;
@@ -221,5 +285,11 @@ namespace GUI
         private Button btnHoaDon;
         private Button btnQuanLySuDungNuoc;
         private Label lblHeader;
+        private Panel panel3;
+        private Panel panel5;
+        private Label lblUsername;
+        private Panel panel4;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox1;
     }
 }
