@@ -173,7 +173,8 @@ namespace GUI
         private void btnXuatHoaDon_Click(object sender, EventArgs e)
         {
             HoaDonReport hoaDonReport = new HoaDonReport();
-            string filePath = "D:\\C#\\BTL\\QuanLyThuPhiCapNuocSach\\Report\\CrystalReport_HoaDon.rpt";
+            //string filePath = "D:\\C#\\BTL\\QuanLyThuPhiCapNuocSach\\Report\\CrystalReport_HoaDon.rpt";
+            string filePath = "";
             string recordFilter = "";
             if (dgvHoaDon.SelectedRows.Count > 0)
             {
