@@ -188,27 +188,29 @@ namespace GUI
             hoaDonReport.Show();
         }
 
-        private void checkbox_ngaylaphd_CheckedChanged(object sender, EventArgs e)
+       
+
+        private void txtTenKhachHang_TextChanged_1(object sender, EventArgs e)
         {
             findAll();
         }
 
-        private void txtTenKhachHang_TextChanged(object sender, EventArgs e)
+        private void cboTrangThaiThanhToan_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             findAll();
         }
 
-        private void txtHoaDonThang_TextChanged(object sender, EventArgs e)
+        private void txtHoaDonThang_TextChanged_1(object sender, EventArgs e)
         {
             findAll();
         }
 
-        private void txtHoaDonNam_TextChanged(object sender, EventArgs e)
+        private void txtHoaDonNam_TextChanged_1(object sender, EventArgs e)
         {
             findAll();
         }
 
-        private void cboTrangThaiThanhToan_SelectedIndexChanged(object sender, EventArgs e)
+        private void checkbox_ngaylaphd_CheckedChanged_1(object sender, EventArgs e)
         {
             findAll();
         }

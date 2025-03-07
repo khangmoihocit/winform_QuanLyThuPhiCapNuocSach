@@ -90,6 +90,12 @@
     <Compile Include="QuenMatKhauGUI.Designer.cs">
       <DependentUpon>QuenMatKhauGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="TaoHoaDonGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaoHoaDonGUI.Designer.cs">
+      <DependentUpon>TaoHoaDonGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThongKeBaoCaoGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuenMatKhauGUI.resx">
       <DependentUpon>QuenMatKhauGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaoHoaDonGUI.resx">
+      <DependentUpon>TaoHoaDonGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThongKeBaoCaoGUI.resx">
       <DependentUpon>ThongKeBaoCaoGUI.cs</DependentUpon>

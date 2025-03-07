@@ -20,16 +20,6 @@ namespace GUI
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -38,6 +28,9 @@ namespace GUI
         private void NhanVienGUI_Load(object sender, EventArgs e)
         {
             dgvNhanVien.DataSource = nhanVienBUS.getAllByDataTable();
+
         }
+
+
     }
 }
