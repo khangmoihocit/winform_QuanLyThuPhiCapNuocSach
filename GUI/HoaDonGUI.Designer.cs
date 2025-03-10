@@ -41,17 +41,17 @@ namespace GUI
             this.btnXuatHoaDon = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtTenKhachHang = new System.Windows.Forms.TextBox();
-            this.txtHoaDonThang = new System.Windows.Forms.TextBox();
-            this.txtHoaDonNam = new System.Windows.Forms.TextBox();
-            this.cboTrangThaiThanhToan = new System.Windows.Forms.ComboBox();
-            this.dtpNgayLapHD = new System.Windows.Forms.DateTimePicker();
             this.checkbox_ngaylaphd = new System.Windows.Forms.CheckBox();
+            this.dtpNgayLapHD = new System.Windows.Forms.DateTimePicker();
+            this.cboTrangThaiThanhToan = new System.Windows.Forms.ComboBox();
+            this.txtHoaDonNam = new System.Windows.Forms.TextBox();
+            this.txtHoaDonThang = new System.Windows.Forms.TextBox();
+            this.txtTenKhachHang = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnTaoHoaDon = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
@@ -66,9 +66,9 @@ namespace GUI
             // 
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 218);
+            this.panel2.Location = new System.Drawing.Point(0, 258);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1330, 542);
+            this.panel2.Size = new System.Drawing.Size(1330, 502);
             this.panel2.TabIndex = 1;
             // 
             // panel3
@@ -77,7 +77,7 @@ namespace GUI
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1330, 542);
+            this.panel3.Size = new System.Drawing.Size(1330, 502);
             this.panel3.TabIndex = 0;
             // 
             // groupBox1
@@ -86,7 +86,7 @@ namespace GUI
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1330, 542);
+            this.groupBox1.Size = new System.Drawing.Size(1330, 502);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách hóa đơn";
@@ -102,13 +102,13 @@ namespace GUI
             this.dgvHoaDon.ReadOnly = true;
             this.dgvHoaDon.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvHoaDon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHoaDon.Size = new System.Drawing.Size(1324, 511);
+            this.dgvHoaDon.Size = new System.Drawing.Size(1324, 471);
             this.dgvHoaDon.TabIndex = 0;
             // 
             // btnXoa
             // 
             this.btnXoa.AutoSize = true;
-            this.btnXoa.Location = new System.Drawing.Point(625, 175);
+            this.btnXoa.Location = new System.Drawing.Point(624, 209);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(100, 34);
             this.btnXoa.TabIndex = 6;
@@ -119,7 +119,7 @@ namespace GUI
             // btnSua
             // 
             this.btnSua.AutoSize = true;
-            this.btnSua.Location = new System.Drawing.Point(750, 175);
+            this.btnSua.Location = new System.Drawing.Point(749, 209);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(100, 34);
             this.btnSua.TabIndex = 7;
@@ -129,7 +129,7 @@ namespace GUI
             // btnXuatHoaDon
             // 
             this.btnXuatHoaDon.AutoSize = true;
-            this.btnXuatHoaDon.Location = new System.Drawing.Point(880, 175);
+            this.btnXuatHoaDon.Location = new System.Drawing.Point(879, 209);
             this.btnXuatHoaDon.Name = "btnXuatHoaDon";
             this.btnXuatHoaDon.Size = new System.Drawing.Size(139, 34);
             this.btnXuatHoaDon.TabIndex = 8;
@@ -140,7 +140,7 @@ namespace GUI
             // button1
             // 
             this.button1.AutoSize = true;
-            this.button1.Location = new System.Drawing.Point(1041, 175);
+            this.button1.Location = new System.Drawing.Point(1040, 209);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(99, 34);
             this.button1.TabIndex = 9;
@@ -163,79 +163,30 @@ namespace GUI
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1330, 169);
+            this.groupBox2.Size = new System.Drawing.Size(1330, 203);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm kiếm";
             // 
-            // label1
+            // checkbox_ngaylaphd
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(145, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 24);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Tên khách hàng";
+            this.checkbox_ngaylaphd.AutoSize = true;
+            this.checkbox_ngaylaphd.Location = new System.Drawing.Point(865, 85);
+            this.checkbox_ngaylaphd.Name = "checkbox_ngaylaphd";
+            this.checkbox_ngaylaphd.Size = new System.Drawing.Size(18, 17);
+            this.checkbox_ngaylaphd.TabIndex = 16;
+            this.checkbox_ngaylaphd.UseVisualStyleBackColor = true;
+            this.checkbox_ngaylaphd.CheckedChanged += new System.EventHandler(this.checkbox_ngaylaphd_CheckedChanged_1);
             // 
-            // label2
+            // dtpNgayLapHD
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(145, 76);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 24);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Hóa đơn tháng";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(145, 128);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 24);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Hóa đơn năm";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(666, 23);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(201, 24);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Trạng thái thanh toán";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(666, 82);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(164, 24);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Ngày lập hóa đơn";
-            // 
-            // txtTenKhachHang
-            // 
-            this.txtTenKhachHang.Location = new System.Drawing.Point(326, 17);
-            this.txtTenKhachHang.Name = "txtTenKhachHang";
-            this.txtTenKhachHang.Size = new System.Drawing.Size(282, 32);
-            this.txtTenKhachHang.TabIndex = 6;
-            this.txtTenKhachHang.TextChanged += new System.EventHandler(this.txtTenKhachHang_TextChanged_1);
-            // 
-            // txtHoaDonThang
-            // 
-            this.txtHoaDonThang.Location = new System.Drawing.Point(326, 76);
-            this.txtHoaDonThang.Name = "txtHoaDonThang";
-            this.txtHoaDonThang.Size = new System.Drawing.Size(282, 32);
-            this.txtHoaDonThang.TabIndex = 12;
-            this.txtHoaDonThang.TextChanged += new System.EventHandler(this.txtHoaDonThang_TextChanged_1);
-            // 
-            // txtHoaDonNam
-            // 
-            this.txtHoaDonNam.Location = new System.Drawing.Point(326, 128);
-            this.txtHoaDonNam.Name = "txtHoaDonNam";
-            this.txtHoaDonNam.Size = new System.Drawing.Size(282, 32);
-            this.txtHoaDonNam.TabIndex = 13;
-            this.txtHoaDonNam.TextChanged += new System.EventHandler(this.txtHoaDonNam_TextChanged_1);
+            this.dtpNgayLapHD.CustomFormat = "dd/MM/yyyy";
+            this.dtpNgayLapHD.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpNgayLapHD.Location = new System.Drawing.Point(898, 76);
+            this.dtpNgayLapHD.Name = "dtpNgayLapHD";
+            this.dtpNgayLapHD.Size = new System.Drawing.Size(157, 32);
+            this.dtpNgayLapHD.TabIndex = 15;
+            this.dtpNgayLapHD.Value = new System.DateTime(2025, 3, 1, 0, 0, 0, 0);
             // 
             // cboTrangThaiThanhToan
             // 
@@ -249,30 +200,79 @@ namespace GUI
             this.cboTrangThaiThanhToan.TabIndex = 14;
             this.cboTrangThaiThanhToan.SelectedIndexChanged += new System.EventHandler(this.cboTrangThaiThanhToan_SelectedIndexChanged_1);
             // 
-            // dtpNgayLapHD
+            // txtHoaDonNam
             // 
-            this.dtpNgayLapHD.CustomFormat = "dd/MM/yyyy";
-            this.dtpNgayLapHD.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpNgayLapHD.Location = new System.Drawing.Point(898, 76);
-            this.dtpNgayLapHD.Name = "dtpNgayLapHD";
-            this.dtpNgayLapHD.Size = new System.Drawing.Size(157, 32);
-            this.dtpNgayLapHD.TabIndex = 15;
-            this.dtpNgayLapHD.Value = new System.DateTime(2025, 3, 1, 0, 0, 0, 0);
+            this.txtHoaDonNam.Location = new System.Drawing.Point(326, 128);
+            this.txtHoaDonNam.Name = "txtHoaDonNam";
+            this.txtHoaDonNam.Size = new System.Drawing.Size(282, 32);
+            this.txtHoaDonNam.TabIndex = 13;
+            this.txtHoaDonNam.TextChanged += new System.EventHandler(this.txtHoaDonNam_TextChanged_1);
             // 
-            // checkbox_ngaylaphd
+            // txtHoaDonThang
             // 
-            this.checkbox_ngaylaphd.AutoSize = true;
-            this.checkbox_ngaylaphd.Location = new System.Drawing.Point(865, 85);
-            this.checkbox_ngaylaphd.Name = "checkbox_ngaylaphd";
-            this.checkbox_ngaylaphd.Size = new System.Drawing.Size(18, 17);
-            this.checkbox_ngaylaphd.TabIndex = 16;
-            this.checkbox_ngaylaphd.UseVisualStyleBackColor = true;
-            this.checkbox_ngaylaphd.CheckedChanged += new System.EventHandler(this.checkbox_ngaylaphd_CheckedChanged_1);
+            this.txtHoaDonThang.Location = new System.Drawing.Point(326, 76);
+            this.txtHoaDonThang.Name = "txtHoaDonThang";
+            this.txtHoaDonThang.Size = new System.Drawing.Size(282, 32);
+            this.txtHoaDonThang.TabIndex = 12;
+            this.txtHoaDonThang.TextChanged += new System.EventHandler(this.txtHoaDonThang_TextChanged_1);
+            // 
+            // txtTenKhachHang
+            // 
+            this.txtTenKhachHang.Location = new System.Drawing.Point(326, 17);
+            this.txtTenKhachHang.Name = "txtTenKhachHang";
+            this.txtTenKhachHang.Size = new System.Drawing.Size(282, 32);
+            this.txtTenKhachHang.TabIndex = 6;
+            this.txtTenKhachHang.TextChanged += new System.EventHandler(this.txtTenKhachHang_TextChanged_1);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(666, 82);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(164, 24);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Ngày lập hóa đơn";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(666, 23);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(201, 24);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Trạng thái thanh toán";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(145, 128);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(130, 24);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Hóa đơn năm";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(145, 76);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(141, 24);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Hóa đơn tháng";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(145, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(150, 24);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Tên khách hàng";
             // 
             // btnTaoHoaDon
             // 
             this.btnTaoHoaDon.AutoSize = true;
-            this.btnTaoHoaDon.Location = new System.Drawing.Point(469, 175);
+            this.btnTaoHoaDon.Location = new System.Drawing.Point(468, 209);
             this.btnTaoHoaDon.Name = "btnTaoHoaDon";
             this.btnTaoHoaDon.Size = new System.Drawing.Size(130, 34);
             this.btnTaoHoaDon.TabIndex = 11;
@@ -290,7 +290,7 @@ namespace GUI
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1330, 218);
+            this.panel1.Size = new System.Drawing.Size(1330, 258);
             this.panel1.TabIndex = 0;
             // 
             // HoaDonGUI
