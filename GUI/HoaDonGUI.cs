@@ -154,6 +154,7 @@ namespace GUI
                 {
                     param["@sTrangThai"] = 0;
                 }
+
             }
 
             if (checkbox_ngaylaphd.Checked == true)
