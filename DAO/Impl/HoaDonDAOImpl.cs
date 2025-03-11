@@ -17,7 +17,7 @@ namespace DAO.impl
         {
             //List<HoaDonDTO> hoaDonDTOs = new List<HoaDonDTO>();
             DataTable dataTable = new DataTable();
-            string query = "select * from vHoaDon";
+            string query = "spHoaDon_Get";
             using (SqlConnection sqlConnection = Connection.GetSqlConnection())
             {
                 sqlConnection.Open();
