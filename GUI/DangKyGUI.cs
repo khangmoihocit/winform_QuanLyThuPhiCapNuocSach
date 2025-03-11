@@ -40,57 +40,11 @@ namespace GUI
             return Regex.IsMatch(email, "^[a-zA-Z0-9_.]{3,20}@gmail.com$");
         }
 
-        private bool checkInput()
-        {
-            //check input tên tk
-            if (!checkInputTaiKhoan(txtTenTaiKhoan.Text))
-            {
-                MessageBox.Show("tên tài khoản không được chứa kí đặc biệt và từ phải từ 6 - 24 kí tự");
-                return false;
-            }
-
-            //check mật khẩu
-            if (!checkInputTaiKhoan(txtMatKhau.Text))
-            {
-                MessageBox.Show("mật khẩu không được chứa kí đặc biệt và từ phải từ 6 - 24 kí tự");
-                return false;
-            }
-
-            //check email
-            if (!checkInputEmail(txtEmail.Text))
-            {
-                MessageBox.Show("email không p được chứa kí tự đặc biệt và email phải có định dạng '@gmail.com'");
-                return false;
-            }
-
-            //xac nhan mk
-            if (txtXacNhanMK.Text != txtMatKhau.Text)
-            {
-                MessageBox.Show("mật khẩu không khớp");
-                return false;
-            }
-
-            //
-            //check xem đã có tên tài khaonr chx
-            if (taiKhoanBUS.findByTentaikhoan(txtTenTaiKhoan.Text).Count > 0)
-            {
-                MessageBox.Show("Tên tài khoản đã tồn tại");
-                return false;
-            }
-
-            //check email da co chx
-            if (taiKhoanBUS.findByEmail(txtEmail.Text).Count > 0)
-            {
-                MessageBox.Show("Email đã tồn tại");
-                return false;
-            }
-            return true;
-        }
+       
 
         private void btnDangKy_Click(object sender, EventArgs e)
         {
-            if (checkInput())
-            {
+
                 try
                 {
                     TaiKhoanDTO taiKhoanDTO = new TaiKhoanDTO(txtTenTaiKhoan.Text, txtMatKhau.Text, txtEmail.Text);
@@ -103,7 +57,7 @@ namespace GUI
                 {
                     MessageBox.Show(ex.Message);
                 }
-            }//checkinput
+
         }
 
         private void DangKyGUI_Load(object sender, EventArgs e)
@@ -112,6 +66,78 @@ namespace GUI
             nhanVienDTOs.ForEach(item =>{cboNhanVien.Items.Add(item);});
         }
 
+        private void txtTenTaiKhoan_TextChanged(object sender, EventArgs e)
+        {
+            if (!checkInputTaiKhoan(txtTenTaiKhoan.Text))
+            {
+                errorProvider1.SetError(txtTenTaiKhoan, "tên tài khoản không được chứa kí đặc biệt và từ phải từ 6 - 24 kí tự");
+                return;
+            }
+            else
+            {
+                errorProvider1.SetError(txtTenTaiKhoan, "");
+            }
 
+            if (taiKhoanBUS.findByTentaikhoan(txtTenTaiKhoan.Text).Count > 0)
+            {
+                errorProvider1.SetError(txtTenTaiKhoan, "Tên tài khoản đã tồn tại");
+            }
+            else
+            {
+                errorProvider1.SetError(txtTenTaiKhoan, "");
+            }
+        }
+
+        private void txtMatKhau_TextChanged(object sender, EventArgs e)
+        {
+            if (!checkInputTaiKhoan(txtMatKhau.Text))
+            {
+                errorProvider1.SetError(txtMatKhau, "mật khẩu không được chứa kí đặc biệt và từ phải từ 6 - 24 kí tự");
+                return;
+            }
+            else
+            {
+                errorProvider1.SetError(txtMatKhau, "");
+            }
+
+            
+        }
+
+        private void txtXacNhanMK_TextChanged(object sender, EventArgs e)
+        {
+            if (txtXacNhanMK.Text != txtMatKhau.Text)
+            {
+                errorProvider1.SetError(txtXacNhanMK, "mật khẩu không khớp");
+            }
+            else
+            {
+                errorProvider1.SetError(txtXacNhanMK, "");
+
+            }
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+            if (!checkInputEmail(txtEmail.Text))
+            {
+                errorProvider1.SetError(txtEmail, "email không p được chứa kí tự đặc biệt và email phải có định dạng '@gmail.com'");
+                return;
+            }
+            else
+            {
+                errorProvider1.SetError(txtEmail, "");
+            }
+
+            if (taiKhoanBUS.findByEmail(txtEmail.Text).Count > 0)
+            {
+                errorProvider1.SetError(txtEmail, "Email đã tồn tại");
+            }
+            else
+            {
+                errorProvider1.SetError(txtEmail, "");
+            }
+
+
+        }
     }
 }

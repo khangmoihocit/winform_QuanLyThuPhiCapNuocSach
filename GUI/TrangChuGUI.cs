@@ -16,6 +16,8 @@ namespace GUI
     {
         private NhanVienBUS nhanVienBUS;
         private TaiKhoanDTO taiKhoanDTO;
+
+
         public TrangChuGUI(TaiKhoanDTO taiKhoanDTO)
         {
             InitializeComponent();

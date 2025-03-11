@@ -31,6 +31,7 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTenTaiKhoan = new System.Windows.Forms.TextBox();
@@ -43,7 +44,9 @@ namespace GUI
             this.btnDangKy = new System.Windows.Forms.Button();
             this.cboNhanVien = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -76,6 +79,7 @@ namespace GUI
             this.txtTenTaiKhoan.Name = "txtTenTaiKhoan";
             this.txtTenTaiKhoan.Size = new System.Drawing.Size(287, 32);
             this.txtTenTaiKhoan.TabIndex = 0;
+            this.txtTenTaiKhoan.TextChanged += new System.EventHandler(this.txtTenTaiKhoan_TextChanged);
             // 
             // label2
             // 
@@ -97,6 +101,7 @@ namespace GUI
             this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.Size = new System.Drawing.Size(287, 32);
             this.txtMatKhau.TabIndex = 1;
+            this.txtMatKhau.TextChanged += new System.EventHandler(this.txtMatKhau_TextChanged);
             // 
             // label3
             // 
@@ -118,6 +123,7 @@ namespace GUI
             this.txtXacNhanMK.PasswordChar = '*';
             this.txtXacNhanMK.Size = new System.Drawing.Size(287, 32);
             this.txtXacNhanMK.TabIndex = 2;
+            this.txtXacNhanMK.TextChanged += new System.EventHandler(this.txtXacNhanMK_TextChanged);
             // 
             // label4
             // 
@@ -138,6 +144,7 @@ namespace GUI
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(287, 32);
             this.txtEmail.TabIndex = 3;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // btnDangKy
             // 
@@ -173,6 +180,10 @@ namespace GUI
             this.label5.TabIndex = 1;
             this.label5.Text = "Bạn là";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // DangKyGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -197,6 +208,7 @@ namespace GUI
             this.Text = "Đăng ký tài khoản";
             this.Load += new System.EventHandler(this.DangKyGUI_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -216,5 +228,6 @@ namespace GUI
         private Button btnDangKy;
         private ComboBox cboNhanVien;
         private Label label5;
+        private ErrorProvider errorProvider1;
     }
 }

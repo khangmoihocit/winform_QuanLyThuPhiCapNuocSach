@@ -109,24 +109,24 @@ namespace GUI
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             Dictionary<string, object> param = new Dictionary<string, object>();
-            param["sHoTen"] = txtTenKhachHang.Text;
-            param["iThang"] = txtHoaDonThang.Text;
-            param["iNam"] = txtHoaDonNam.Text;
+            param["@sHoTen"] = txtTenKhachHang.Text;
+            param["@iThang"] = txtHoaDonThang.Text;
+            param["@iNam"] = txtHoaDonNam.Text;
             if (cboTrangThaiThanhToan.SelectedItem != null)
             {
                 if (cboTrangThaiThanhToan.SelectedItem.ToString().Equals("Đã thanh toán"))
                 {
-                    param["sTrangThai"] = 1;
+                    param["@sTrangThai"] = 1;
                 }
                 else
                 {
-                    param["sTrangThai"] = 0;
+                    param["@sTrangThai"] = 0;
                 }
             }
 
             if (checkbox_ngaylaphd.Checked == true)
             {
-                param["dNgayLap"] = dtpNgayLapHD.Value.ToString("yyyy/MM/dd");
+                param["@dNgayLap"] = dtpNgayLapHD.Value.ToString("yyyy/MM/dd");
             }
             try
             {
@@ -141,24 +141,24 @@ namespace GUI
         private void findAll()
         {
             Dictionary<string, object> param = new Dictionary<string, object>();
-            param["sHoTen"] = txtTenKhachHang.Text;
-            param["iThang"] = txtHoaDonThang.Text;
-            param["iNam"] = txtHoaDonNam.Text;
+            param["@sHoTen"] = txtTenKhachHang.Text;
+            param["@iThang"] = txtHoaDonThang.Text;
+            param["@iNam"] = txtHoaDonNam.Text;
             if (cboTrangThaiThanhToan.SelectedItem != null)
             {
                 if (cboTrangThaiThanhToan.SelectedItem.ToString().Equals("Đã thanh toán"))
                 {
-                    param["sTrangThai"] = 1;
+                    param["@sTrangThai"] = 1;
                 }
                 else
                 {
-                    param["sTrangThai"] = 0;
+                    param["@sTrangThai"] = 0;
                 }
             }
 
             if (checkbox_ngaylaphd.Checked == true)
             {
-                param["dNgayLap"] = dtpNgayLapHD.Value.ToString("yyyy/MM/dd");
+                param["@dNgayLap"] = dtpNgayLapHD.Value.ToString("yyyy/MM/dd");
             }
             try
             {

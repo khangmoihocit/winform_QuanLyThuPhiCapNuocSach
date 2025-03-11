@@ -31,6 +31,7 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DangNhapGUI));
             this.txtTaiKhoan = new System.Windows.Forms.TextBox();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
@@ -40,20 +41,25 @@ namespace GUI
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lblThongBao = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtTaiKhoan
             // 
             resources.ApplyResources(this.txtTaiKhoan, "txtTaiKhoan");
             this.txtTaiKhoan.Name = "txtTaiKhoan";
+            this.txtTaiKhoan.TextChanged += new System.EventHandler(this.txtTaiKhoan_TextChanged);
             // 
             // txtMatKhau
             // 
             resources.ApplyResources(this.txtMatKhau, "txtMatKhau");
             this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.TextChanged += new System.EventHandler(this.txtMatKhau_TextChanged);
             // 
             // lklQuenMatKhau
             // 
@@ -102,11 +108,22 @@ namespace GUI
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // lblThongBao
+            // 
+            resources.ApplyResources(this.lblThongBao, "lblThongBao");
+            this.lblThongBao.ForeColor = System.Drawing.Color.Red;
+            this.lblThongBao.Name = "lblThongBao";
+            // 
             // DangNhapGUI
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Controls.Add(this.lblThongBao);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.lklDangKy);
             this.Controls.Add(this.lklQuenMatKhau);
@@ -121,6 +138,7 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,5 +154,7 @@ namespace GUI
         private LinkLabel lklQuenMatKhau;
         private LinkLabel lklDangKy;
         private Button btnDangNhap;
+        private ErrorProvider errorProvider1;
+        private Label lblThongBao;
     }
 }

@@ -38,40 +38,31 @@ namespace GUI
         }
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            if (txtTaiKhoan.Text.Trim() == "") MessageBox.Show("Vui lòng nhập tên tài khoản");
-            else if (txtMatKhau.Text.Trim() == "") MessageBox.Show("Vui lòng nhập mật khẩu");
-            else
-            {
+            
                 try
                 {
                     List<TaiKhoanDTO> taiKhoanDTOs = taiKhoanBUS.findByTentaikhoanAndMatkhau(txtTaiKhoan.Text, txtMatKhau.Text);
                     if (taiKhoanDTOs.Count > 0)
                     {
-                        DialogResult re = MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        
-                        if (re == DialogResult.OK)
-                        {
                             TrangChuGUI trangChuGUI = new TrangChuGUI(taiKhoanDTOs[0]);
                             trangChuGUI.Show();
                             this.Hide();
-                        }
                     }
                     else
                     {
-                        MessageBox.Show("Tên tài khoản hoặc mật khẩu không chính xác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        lblThongBao.Text = "Tài khoản hoặc mật khẩu không chính xác";
                     }
                 }
                 catch (DatabaseException ex)
                 {
                     MessageBox.Show(ex.Message);
                 }//try
-            }//else
+
         }
 
-        public TaiKhoanDTO getTaiKhoanDTO()
-        {
-            return null;
-        }
+
+
+        
 
         private void DangNhapGUI_Load_1(object sender, EventArgs e)
         {
@@ -82,5 +73,37 @@ namespace GUI
         {
             Application.Exit();
         }
+
+        private void txtTaiKhoan_TextChanged(object sender, EventArgs e)
+        {
+            if(txtTaiKhoan.Text.Trim() == "")
+            {
+                errorProvider1.SetError(txtTaiKhoan, "Vui lòng nhập tên tài khoản");
+                btnDangNhap.Enabled = false;
+
+            }
+            else
+            {
+                errorProvider1.SetError(txtTaiKhoan, "");
+                btnDangNhap.Enabled = true;
+
+            }
+        }
+
+        private void txtMatKhau_TextChanged(object sender, EventArgs e)
+        {
+            if (txtMatKhau.Text.Trim() == "")
+            {
+                errorProvider1.SetError(txtMatKhau, "Vui lòng nhập mật khẩu");
+                btnDangNhap.Enabled = false;
+            }
+            else
+            {
+                errorProvider1.SetError(txtMatKhau, "");
+                btnDangNhap.Enabled = true;
+            }
+        }
+
+
     }
 }
