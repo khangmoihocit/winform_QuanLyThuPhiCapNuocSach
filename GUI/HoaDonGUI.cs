@@ -214,5 +214,20 @@ namespace GUI
         {
             findAll();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            txtTenKhachHang.Text = "";
+            txtHoaDonThang.Text = "";
+            txtHoaDonNam.Text = "";
+            cboTrangThaiThanhToan.SelectedItem = null;
+            checkbox_ngaylaphd.Checked = false;
+        }
+
+        private void btnTaoHoaDon_Click(object sender, EventArgs e)
+        {
+            TaoHoaDonGUI taoHoaDonGUI = new TaoHoaDonGUI();
+            taoHoaDonGUI.ShowDialog();
+        }
     }
 }

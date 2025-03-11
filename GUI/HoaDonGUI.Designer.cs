@@ -66,9 +66,9 @@ namespace GUI
             // 
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 258);
+            this.panel2.Location = new System.Drawing.Point(0, 217);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1330, 502);
+            this.panel2.Size = new System.Drawing.Size(1330, 543);
             this.panel2.TabIndex = 1;
             // 
             // panel3
@@ -77,7 +77,7 @@ namespace GUI
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1330, 502);
+            this.panel3.Size = new System.Drawing.Size(1330, 543);
             this.panel3.TabIndex = 0;
             // 
             // groupBox1
@@ -86,7 +86,7 @@ namespace GUI
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1330, 502);
+            this.groupBox1.Size = new System.Drawing.Size(1330, 543);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách hóa đơn";
@@ -102,13 +102,13 @@ namespace GUI
             this.dgvHoaDon.ReadOnly = true;
             this.dgvHoaDon.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvHoaDon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHoaDon.Size = new System.Drawing.Size(1324, 471);
+            this.dgvHoaDon.Size = new System.Drawing.Size(1324, 512);
             this.dgvHoaDon.TabIndex = 0;
             // 
             // btnXoa
             // 
             this.btnXoa.AutoSize = true;
-            this.btnXoa.Location = new System.Drawing.Point(624, 209);
+            this.btnXoa.Location = new System.Drawing.Point(628, 175);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(100, 34);
             this.btnXoa.TabIndex = 6;
@@ -119,7 +119,7 @@ namespace GUI
             // btnSua
             // 
             this.btnSua.AutoSize = true;
-            this.btnSua.Location = new System.Drawing.Point(749, 209);
+            this.btnSua.Location = new System.Drawing.Point(753, 175);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(100, 34);
             this.btnSua.TabIndex = 7;
@@ -129,7 +129,7 @@ namespace GUI
             // btnXuatHoaDon
             // 
             this.btnXuatHoaDon.AutoSize = true;
-            this.btnXuatHoaDon.Location = new System.Drawing.Point(879, 209);
+            this.btnXuatHoaDon.Location = new System.Drawing.Point(883, 175);
             this.btnXuatHoaDon.Name = "btnXuatHoaDon";
             this.btnXuatHoaDon.Size = new System.Drawing.Size(139, 34);
             this.btnXuatHoaDon.TabIndex = 8;
@@ -140,12 +140,13 @@ namespace GUI
             // button1
             // 
             this.button1.AutoSize = true;
-            this.button1.Location = new System.Drawing.Point(1040, 209);
+            this.button1.Location = new System.Drawing.Point(1044, 175);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(99, 34);
             this.button1.TabIndex = 9;
             this.button1.Text = "Làm mới";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox2
             // 
@@ -163,7 +164,7 @@ namespace GUI
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1330, 203);
+            this.groupBox2.Size = new System.Drawing.Size(1330, 169);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm kiếm";
@@ -272,12 +273,13 @@ namespace GUI
             // btnTaoHoaDon
             // 
             this.btnTaoHoaDon.AutoSize = true;
-            this.btnTaoHoaDon.Location = new System.Drawing.Point(468, 209);
+            this.btnTaoHoaDon.Location = new System.Drawing.Point(478, 175);
             this.btnTaoHoaDon.Name = "btnTaoHoaDon";
             this.btnTaoHoaDon.Size = new System.Drawing.Size(130, 34);
             this.btnTaoHoaDon.TabIndex = 11;
             this.btnTaoHoaDon.Text = "Tạo hóa đơn";
             this.btnTaoHoaDon.UseVisualStyleBackColor = true;
+            this.btnTaoHoaDon.Click += new System.EventHandler(this.btnTaoHoaDon_Click);
             // 
             // panel1
             // 
@@ -290,7 +292,7 @@ namespace GUI
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1330, 258);
+            this.panel1.Size = new System.Drawing.Size(1330, 217);
             this.panel1.TabIndex = 0;
             // 
             // HoaDonGUI
