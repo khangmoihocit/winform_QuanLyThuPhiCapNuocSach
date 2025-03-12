@@ -32,7 +32,6 @@ namespace GUI
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnXuatDSNhanVien = new System.Windows.Forms.Button();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -56,7 +55,6 @@ namespace GUI
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnXuatDSNhanVien);
             this.panel1.Controls.Add(this.btnTimKiem);
             this.panel1.Controls.Add(this.btnXoa);
             this.panel1.Controls.Add(this.btnSua);
@@ -76,20 +74,10 @@ namespace GUI
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // btnXuatDSNhanVien
-            // 
-            this.btnXuatDSNhanVien.AutoSize = true;
-            this.btnXuatDSNhanVien.Location = new System.Drawing.Point(791, 123);
-            this.btnXuatDSNhanVien.Name = "btnXuatDSNhanVien";
-            this.btnXuatDSNhanVien.Size = new System.Drawing.Size(249, 34);
-            this.btnXuatDSNhanVien.TabIndex = 10;
-            this.btnXuatDSNhanVien.Text = "Xuất danh sách nhân viên";
-            this.btnXuatDSNhanVien.UseVisualStyleBackColor = true;
-            // 
             // btnTimKiem
             // 
             this.btnTimKiem.AutoSize = true;
-            this.btnTimKiem.Location = new System.Drawing.Point(656, 123);
+            this.btnTimKiem.Location = new System.Drawing.Point(1087, 123);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(104, 34);
             this.btnTimKiem.TabIndex = 10;
@@ -99,7 +87,7 @@ namespace GUI
             // btnXoa
             // 
             this.btnXoa.AutoSize = true;
-            this.btnXoa.Location = new System.Drawing.Point(537, 123);
+            this.btnXoa.Location = new System.Drawing.Point(968, 123);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(89, 34);
             this.btnXoa.TabIndex = 10;
@@ -109,7 +97,7 @@ namespace GUI
             // btnSua
             // 
             this.btnSua.AutoSize = true;
-            this.btnSua.Location = new System.Drawing.Point(418, 123);
+            this.btnSua.Location = new System.Drawing.Point(849, 123);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(89, 34);
             this.btnSua.TabIndex = 10;
@@ -119,7 +107,7 @@ namespace GUI
             // btnThem
             // 
             this.btnThem.AutoSize = true;
-            this.btnThem.Location = new System.Drawing.Point(302, 123);
+            this.btnThem.Location = new System.Drawing.Point(733, 123);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(89, 34);
             this.btnThem.TabIndex = 10;
@@ -242,6 +230,7 @@ namespace GUI
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "NhanVienGUI";
             this.Text = "NhanVienGUI";
@@ -267,7 +256,6 @@ namespace GUI
         private TextBox txtHoTen;
         private Label label3;
         private Label label1;
-        private Button btnXuatDSNhanVien;
         private Button btnTimKiem;
         private Button btnXoa;
         private Button btnSua;

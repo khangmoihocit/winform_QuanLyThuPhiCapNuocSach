@@ -141,35 +141,35 @@ namespace GUI
             // 
             this.dtpNgayGhi.CustomFormat = "dd/MM/yyyy";
             this.dtpNgayGhi.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpNgayGhi.Location = new System.Drawing.Point(884, 116);
+            this.dtpNgayGhi.Location = new System.Drawing.Point(957, 112);
             this.dtpNgayGhi.Name = "dtpNgayGhi";
             this.dtpNgayGhi.Size = new System.Drawing.Size(160, 32);
             this.dtpNgayGhi.TabIndex = 3;
             // 
             // txtChiSoMoi
             // 
-            this.txtChiSoMoi.Location = new System.Drawing.Point(352, 159);
+            this.txtChiSoMoi.Location = new System.Drawing.Point(425, 155);
             this.txtChiSoMoi.Name = "txtChiSoMoi";
             this.txtChiSoMoi.Size = new System.Drawing.Size(284, 32);
             this.txtChiSoMoi.TabIndex = 2;
             // 
             // txtChiSoNuocNam
             // 
-            this.txtChiSoNuocNam.Location = new System.Drawing.Point(884, 66);
+            this.txtChiSoNuocNam.Location = new System.Drawing.Point(957, 62);
             this.txtChiSoNuocNam.Name = "txtChiSoNuocNam";
             this.txtChiSoNuocNam.Size = new System.Drawing.Size(284, 32);
             this.txtChiSoNuocNam.TabIndex = 2;
             // 
             // txtChiSoNuocThang
             // 
-            this.txtChiSoNuocThang.Location = new System.Drawing.Point(884, 19);
+            this.txtChiSoNuocThang.Location = new System.Drawing.Point(957, 15);
             this.txtChiSoNuocThang.Name = "txtChiSoNuocThang";
             this.txtChiSoNuocThang.Size = new System.Drawing.Size(284, 32);
             this.txtChiSoNuocThang.TabIndex = 2;
             // 
             // txtChiSoCu
             // 
-            this.txtChiSoCu.Location = new System.Drawing.Point(352, 111);
+            this.txtChiSoCu.Location = new System.Drawing.Point(425, 107);
             this.txtChiSoCu.Name = "txtChiSoCu";
             this.txtChiSoCu.Size = new System.Drawing.Size(284, 32);
             this.txtChiSoCu.TabIndex = 2;
@@ -177,7 +177,7 @@ namespace GUI
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(706, 119);
+            this.label7.Location = new System.Drawing.Point(779, 115);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(87, 24);
             this.label7.TabIndex = 0;
@@ -187,7 +187,7 @@ namespace GUI
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(706, 69);
+            this.label6.Location = new System.Drawing.Point(779, 65);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(159, 24);
             this.label6.TabIndex = 0;
@@ -197,7 +197,7 @@ namespace GUI
             // cboNhanVien
             // 
             this.cboNhanVien.FormattingEnabled = true;
-            this.cboNhanVien.Location = new System.Drawing.Point(352, 58);
+            this.cboNhanVien.Location = new System.Drawing.Point(425, 54);
             this.cboNhanVien.Name = "cboNhanVien";
             this.cboNhanVien.Size = new System.Drawing.Size(284, 32);
             this.cboNhanVien.TabIndex = 1;
@@ -206,7 +206,7 @@ namespace GUI
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(706, 22);
+            this.label5.Location = new System.Drawing.Point(779, 18);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(170, 24);
             this.label5.TabIndex = 0;
@@ -216,7 +216,7 @@ namespace GUI
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(156, 159);
+            this.label4.Location = new System.Drawing.Point(229, 155);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(153, 24);
             this.label4.TabIndex = 0;
@@ -226,7 +226,7 @@ namespace GUI
             // cboKhachHang
             // 
             this.cboKhachHang.FormattingEnabled = true;
-            this.cboKhachHang.Location = new System.Drawing.Point(352, 12);
+            this.cboKhachHang.Location = new System.Drawing.Point(425, 8);
             this.cboKhachHang.Name = "cboKhachHang";
             this.cboKhachHang.Size = new System.Drawing.Size(284, 32);
             this.cboKhachHang.TabIndex = 1;
@@ -235,7 +235,7 @@ namespace GUI
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(156, 111);
+            this.label3.Location = new System.Drawing.Point(229, 107);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(140, 24);
             this.label3.TabIndex = 0;
@@ -245,7 +245,7 @@ namespace GUI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(156, 66);
+            this.label2.Location = new System.Drawing.Point(229, 62);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(167, 24);
             this.label2.TabIndex = 0;
@@ -255,7 +255,7 @@ namespace GUI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(156, 19);
+            this.label1.Location = new System.Drawing.Point(229, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(115, 24);
             this.label1.TabIndex = 0;
@@ -305,6 +305,7 @@ namespace GUI
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "QuanLySuDungNuocGUI";
             this.Text = "QuanLySuDungNuocGUI";

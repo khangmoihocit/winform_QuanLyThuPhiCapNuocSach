@@ -25,64 +25,6 @@ namespace GUI
             this.taiKhoanDTO = taiKhoanDTO;
         }
 
-        private Form currentFormChild;
-
-
-        //mở form được truyền vô
-        private void openChildForm(Form childForm)
-        {
-            if (currentFormChild != null)
-            {
-                currentFormChild.Close();
-                currentFormChild.Dispose();  // Giải phóng tài nguyên
-            }
-
-            currentFormChild = childForm;
-
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-
-            panel_Body.Controls.Clear();
-            panel_Body.Controls.Add(childForm);
-            panel_Body.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
-        }
-
-      
-
-        private void btnNhanVien_Click(object sender, EventArgs e)
-        {
-            openChildForm(new NhanVienGUI());
-            lblHeader.Text = "Quản lý nhân viên";
-
-        }
-
-        private void btnKhachHang_Click(object sender, EventArgs e)
-        {
-            openChildForm(new KhachHangGUI());
-            lblHeader.Text = "Quản lý khách hàng";
-
-        }
-
-        private void btnQuanLySuDungNuoc_Click(object sender, EventArgs e)
-        {
-            openChildForm(new QuanLySuDungNuocGUI());
-            lblHeader.Text = "Quản lý sử dụng nước";
-        }
-
-        private void btnHoaDon_Click(object sender, EventArgs e)
-        {
-            openChildForm(new HoaDonGUI());
-            lblHeader.Text = "Quản lý hóa đơn";
-        }
-
-        private void btnThongkeVaBaocao_Click(object sender, EventArgs e)
-        {
-            openChildForm(new ThongKeBaoCaoGUI());
-            lblHeader.Text = "Thống kê và báo cáo";
-        }
 
 
 
@@ -114,8 +56,54 @@ namespace GUI
 
         private void TrangChuGUI_Load_1(object sender, EventArgs e)
         {
-            NhanVienDTO nhanVienDTO = nhanVienBUS.findById(taiKhoanDTO.MaNhanVien)[0];
-            lblUsername.Text = "Xin chào! " + nhanVienDTO.HoTen;
+            //NhanVienDTO nhanVienDTO = nhanVienBUS.findById(taiKhoanDTO.MaNhanVien)[0];
+            //lblUsername.Text = "Xin chào! " + nhanVienDTO.HoTen;
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            Form frm = null;
+
+            // Kiểm tra xem form đã mở chưa
+            foreach (Form childForm in this.MdiChildren)
+            {
+                if ((e.ClickedItem.Name == "mnuNhanVien" && childForm is NhanVienGUI) ||
+                    (e.ClickedItem.Name == "mnuKhachHang" && childForm is KhachHangGUI) ||
+                    (e.ClickedItem.Name == "mnuQuanLySuDungNuoc" && childForm is QuanLySuDungNuocGUI) ||
+                    (e.ClickedItem.Name == "mnuHoaDon" && childForm is HoaDonGUI))
+                {
+                    childForm.BringToFront();
+                    return;
+                }
+            }
+
+            // Nếu chưa mở, tạo mới form phù hợp
+            switch (e.ClickedItem.Name)
+            {
+                case "mnuNhanVien":
+                    frm = new NhanVienGUI();
+                    break;
+                case "mnuKhachHang":
+                    frm = new KhachHangGUI();
+                    break;
+                case "mnuQuanLySuDungNuoc":
+                    frm = new QuanLySuDungNuocGUI();
+                    break;
+                case "mnuHoaDon":
+                    frm = new HoaDonGUI();
+                    break;
+                default:
+                    break;
+            }
+
+            if (frm != null)
+            {
+                frm.MdiParent = this;
+                frm.WindowState = FormWindowState.Maximized;
+                frm.Show();
+                frm.BringToFront();
+            }
+        }
+
     }
 }
