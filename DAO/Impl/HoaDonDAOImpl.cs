@@ -63,7 +63,6 @@ namespace DAO.impl
         {
             string query = "spHoaDon_GetAll";
             
-            
             try
             {
                 using (SqlConnection sqlConnection = Connection.GetSqlConnection())

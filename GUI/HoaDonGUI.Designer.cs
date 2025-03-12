@@ -38,7 +38,6 @@ namespace GUI
             this.dgvHoaDon = new System.Windows.Forms.DataGridView();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
-            this.btnXuatHoaDon = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.checkbox_ngaylaphd = new System.Windows.Forms.CheckBox();
@@ -93,7 +92,7 @@ namespace GUI
             // 
             // dgvHoaDon
             // 
-            this.dgvHoaDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvHoaDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvHoaDon.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvHoaDon.ColumnHeadersHeight = 29;
             this.dgvHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -108,7 +107,7 @@ namespace GUI
             // btnXoa
             // 
             this.btnXoa.AutoSize = true;
-            this.btnXoa.Location = new System.Drawing.Point(628, 175);
+            this.btnXoa.Location = new System.Drawing.Point(796, 175);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(100, 34);
             this.btnXoa.TabIndex = 6;
@@ -119,23 +118,12 @@ namespace GUI
             // btnSua
             // 
             this.btnSua.AutoSize = true;
-            this.btnSua.Location = new System.Drawing.Point(753, 175);
+            this.btnSua.Location = new System.Drawing.Point(921, 175);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(100, 34);
             this.btnSua.TabIndex = 7;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
-            // 
-            // btnXuatHoaDon
-            // 
-            this.btnXuatHoaDon.AutoSize = true;
-            this.btnXuatHoaDon.Location = new System.Drawing.Point(883, 175);
-            this.btnXuatHoaDon.Name = "btnXuatHoaDon";
-            this.btnXuatHoaDon.Size = new System.Drawing.Size(139, 34);
-            this.btnXuatHoaDon.TabIndex = 8;
-            this.btnXuatHoaDon.Text = "Xuất hóa đơn";
-            this.btnXuatHoaDon.UseVisualStyleBackColor = true;
-            this.btnXuatHoaDon.Click += new System.EventHandler(this.btnXuatHoaDon_Click);
             // 
             // button1
             // 
@@ -172,7 +160,7 @@ namespace GUI
             // checkbox_ngaylaphd
             // 
             this.checkbox_ngaylaphd.AutoSize = true;
-            this.checkbox_ngaylaphd.Location = new System.Drawing.Point(865, 85);
+            this.checkbox_ngaylaphd.Location = new System.Drawing.Point(921, 74);
             this.checkbox_ngaylaphd.Name = "checkbox_ngaylaphd";
             this.checkbox_ngaylaphd.Size = new System.Drawing.Size(18, 17);
             this.checkbox_ngaylaphd.TabIndex = 16;
@@ -183,7 +171,7 @@ namespace GUI
             // 
             this.dtpNgayLapHD.CustomFormat = "dd/MM/yyyy";
             this.dtpNgayLapHD.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpNgayLapHD.Location = new System.Drawing.Point(898, 76);
+            this.dtpNgayLapHD.Location = new System.Drawing.Point(954, 65);
             this.dtpNgayLapHD.Name = "dtpNgayLapHD";
             this.dtpNgayLapHD.Size = new System.Drawing.Size(157, 32);
             this.dtpNgayLapHD.TabIndex = 15;
@@ -195,7 +183,7 @@ namespace GUI
             this.cboTrangThaiThanhToan.Items.AddRange(new object[] {
             "Đã thanh toán",
             "Chưa thanh toán"});
-            this.cboTrangThaiThanhToan.Location = new System.Drawing.Point(898, 23);
+            this.cboTrangThaiThanhToan.Location = new System.Drawing.Point(954, 17);
             this.cboTrangThaiThanhToan.Name = "cboTrangThaiThanhToan";
             this.cboTrangThaiThanhToan.Size = new System.Drawing.Size(282, 32);
             this.cboTrangThaiThanhToan.TabIndex = 14;
@@ -203,7 +191,7 @@ namespace GUI
             // 
             // txtHoaDonNam
             // 
-            this.txtHoaDonNam.Location = new System.Drawing.Point(326, 128);
+            this.txtHoaDonNam.Location = new System.Drawing.Point(382, 117);
             this.txtHoaDonNam.Name = "txtHoaDonNam";
             this.txtHoaDonNam.Size = new System.Drawing.Size(282, 32);
             this.txtHoaDonNam.TabIndex = 13;
@@ -211,7 +199,7 @@ namespace GUI
             // 
             // txtHoaDonThang
             // 
-            this.txtHoaDonThang.Location = new System.Drawing.Point(326, 76);
+            this.txtHoaDonThang.Location = new System.Drawing.Point(382, 65);
             this.txtHoaDonThang.Name = "txtHoaDonThang";
             this.txtHoaDonThang.Size = new System.Drawing.Size(282, 32);
             this.txtHoaDonThang.TabIndex = 12;
@@ -219,7 +207,7 @@ namespace GUI
             // 
             // txtTenKhachHang
             // 
-            this.txtTenKhachHang.Location = new System.Drawing.Point(326, 17);
+            this.txtTenKhachHang.Location = new System.Drawing.Point(382, 17);
             this.txtTenKhachHang.Name = "txtTenKhachHang";
             this.txtTenKhachHang.Size = new System.Drawing.Size(282, 32);
             this.txtTenKhachHang.TabIndex = 6;
@@ -228,7 +216,7 @@ namespace GUI
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(666, 82);
+            this.label5.Location = new System.Drawing.Point(722, 71);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(164, 24);
             this.label5.TabIndex = 7;
@@ -237,7 +225,7 @@ namespace GUI
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(666, 23);
+            this.label4.Location = new System.Drawing.Point(722, 20);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(201, 24);
             this.label4.TabIndex = 8;
@@ -246,7 +234,7 @@ namespace GUI
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(145, 128);
+            this.label3.Location = new System.Drawing.Point(201, 117);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(130, 24);
             this.label3.TabIndex = 9;
@@ -255,7 +243,7 @@ namespace GUI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(145, 76);
+            this.label2.Location = new System.Drawing.Point(201, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(141, 24);
             this.label2.TabIndex = 10;
@@ -264,7 +252,7 @@ namespace GUI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(145, 23);
+            this.label1.Location = new System.Drawing.Point(201, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(150, 24);
             this.label1.TabIndex = 11;
@@ -273,7 +261,7 @@ namespace GUI
             // btnTaoHoaDon
             // 
             this.btnTaoHoaDon.AutoSize = true;
-            this.btnTaoHoaDon.Location = new System.Drawing.Point(478, 175);
+            this.btnTaoHoaDon.Location = new System.Drawing.Point(646, 175);
             this.btnTaoHoaDon.Name = "btnTaoHoaDon";
             this.btnTaoHoaDon.Size = new System.Drawing.Size(130, 34);
             this.btnTaoHoaDon.TabIndex = 11;
@@ -286,7 +274,6 @@ namespace GUI
             this.panel1.Controls.Add(this.btnTaoHoaDon);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.btnXuatHoaDon);
             this.panel1.Controls.Add(this.btnSua);
             this.panel1.Controls.Add(this.btnXoa);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -303,6 +290,7 @@ namespace GUI
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "HoaDonGUI";
             this.Text = "HoaDonGUI";
@@ -326,7 +314,6 @@ namespace GUI
         private DataGridView dgvHoaDon;
         private Button btnXoa;
         private Button btnSua;
-        private Button btnXuatHoaDon;
         private Button button1;
         private GroupBox groupBox2;
         private CheckBox checkbox_ngaylaphd;
