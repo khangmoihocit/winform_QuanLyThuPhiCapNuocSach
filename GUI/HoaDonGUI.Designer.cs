@@ -53,6 +53,7 @@ namespace GUI
             this.label1 = new System.Windows.Forms.Label();
             this.btnTaoHoaDon = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnXuatHoaDon = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -272,6 +273,7 @@ namespace GUI
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnXuatHoaDon);
             this.panel1.Controls.Add(this.btnTaoHoaDon);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.button1);
@@ -282,6 +284,17 @@ namespace GUI
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1330, 217);
             this.panel1.TabIndex = 0;
+            // 
+            // btnXuatHoaDon
+            // 
+            this.btnXuatHoaDon.AutoSize = true;
+            this.btnXuatHoaDon.Location = new System.Drawing.Point(1170, 175);
+            this.btnXuatHoaDon.Name = "btnXuatHoaDon";
+            this.btnXuatHoaDon.Size = new System.Drawing.Size(139, 34);
+            this.btnXuatHoaDon.TabIndex = 12;
+            this.btnXuatHoaDon.Text = "Xuất hóa đơn";
+            this.btnXuatHoaDon.UseVisualStyleBackColor = true;
+            this.btnXuatHoaDon.Click += new System.EventHandler(this.btnXuatHoaDon_Click_1);
             // 
             // HoaDonGUI
             // 
@@ -330,5 +343,6 @@ namespace GUI
         private Label label1;
         private Button btnTaoHoaDon;
         private Panel panel1;
+        private Button btnXuatHoaDon;
     }
 }

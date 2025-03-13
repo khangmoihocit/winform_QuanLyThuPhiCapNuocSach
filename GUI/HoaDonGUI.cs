@@ -237,5 +237,23 @@ namespace GUI
             HoaDonGUI_Sua hoaDonGUI_Sua = new HoaDonGUI_Sua();
             hoaDonGUI_Sua.ShowDialog();
         }
+
+        private void btnXuatHoaDon_Click_1(object sender, EventArgs e)
+        {
+            HoaDonReport hoaDonReport = new HoaDonReport();
+            string filePath = "D:\\C#\\BTL\\QuanLyThuPhiCapNuocSach\\Report\\CrystalReport_HoaDon.rpt";
+            string recordFilter = "";
+            if (dgvHoaDon.SelectedRows.Count > 0)
+            {
+                int id = int.Parse(dgvHoaDon.SelectedRows[0].Cells[0].Value.ToString());
+                recordFilter = "{tblHoaDon.iMaHD} = " + id + " ";
+
+                MessageBox.Show(recordFilter);
+            }
+
+
+            hoaDonReport.showReport(filePath, "", recordFilter);
+            hoaDonReport.Show();
+        }
     }
 }
