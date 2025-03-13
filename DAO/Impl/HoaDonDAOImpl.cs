@@ -101,8 +101,32 @@ namespace DAO.impl
             }
         }
 
+        public void add(HoaDonDTO hoaDonDTO)
+        {
+            string query = "spHoaDon_Insert";
+            using(SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                sqlConnection.Open();
+                using(SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                {
+                    sqlCommand.CommandType = CommandType.StoredProcedure;
 
+                    sqlCommand.Parameters.AddWithValue("@iMaChiSo", hoaDonDTO.MaChiSo);
+                    sqlCommand.Parameters.AddWithValue("@fSoNuocTieuThu", hoaDonDTO.SoNuocTieuThu);
+                    sqlCommand.Parameters.AddWithValue("@sTrangThai", hoaDonDTO.TrangThaiThanhToan);
+                    sqlCommand.Parameters.AddWithValue("@dNgayLap", hoaDonDTO.NgayLapHD);
+                    sqlCommand.Parameters.AddWithValue("@iMaGiaNuoc", hoaDonDTO.MaGiaNuoc);
+                    sqlCommand.Parameters.AddWithValue("@iThang", hoaDonDTO.HdThang);
+                    sqlCommand.Parameters.AddWithValue("@iNam", hoaDonDTO.HdNam);
+                    sqlCommand.Parameters.AddWithValue("@fThanhTien", hoaDonDTO.TongThanhTien);
 
+                    int n = sqlCommand.ExecuteNonQuery();
+                    if (n < 0) throw new DatabaseException("Lỗi! thêm hóa đơn thất bại");
+                }
+                sqlConnection.Close();
+            }
 
+            
+        }
     }
 }

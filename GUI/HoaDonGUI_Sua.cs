@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class TaoHoaDonGUI: Form
+    public partial class HoaDonGUI_Sua: Form
     {
-        public TaoHoaDonGUI()
+        public HoaDonGUI_Sua()
         {
             InitializeComponent();
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cboKhachHang_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -46,10 +46,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IChiSoNuocDAO.cs" />
+    <Compile Include="IGiaNuocDAO.cs" />
     <Compile Include="IHoaDonDAO.cs" />
     <Compile Include="IKhachHangDAO.cs" />
     <Compile Include="Impl\ChiSoNuocDAOImpl.cs" />
     <Compile Include="Impl\Connection.cs" />
+    <Compile Include="Impl\GiaNuocDAOImpl.cs" />
     <Compile Include="Impl\HoaDonDAOImpl.cs" />
     <Compile Include="Impl\KhachHangDAOImpl.cs" />
     <Compile Include="Impl\NhanVienDAOImpl.cs" />

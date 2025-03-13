@@ -13,5 +13,6 @@ namespace DAO
         DataTable HoaDons();
         void deleteById(int id );
         DataTable findAll(Dictionary<string, object> param);
+        void add(HoaDonDTO hoaDonDTO);
     }
 }

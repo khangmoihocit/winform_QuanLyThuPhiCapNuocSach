@@ -23,5 +23,7 @@ namespace BUS
         {
             return chiSoNuocDAO.getAllByDataTable();
         }
+
+        public List<ChiSoNuocDTO> findByMakhachhang(int maKhachHang, int thang, int nam) => chiSoNuocDAO.findByMakhachhang(maKhachHang, thang, nam);
     }
 }

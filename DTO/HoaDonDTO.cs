@@ -16,6 +16,8 @@ namespace DTO
         private DateTime _ngayLapHD;
         private double _tongThanhTien;
         private double _soNuocTieuThu;
+        private int _maChiSo;
+        private int _maGiaNuoc;
 
         public HoaDonDTO() { }
         
@@ -39,5 +41,7 @@ namespace DTO
         public DateTime NgayLapHD { get => _ngayLapHD; set => _ngayLapHD = value; }
         public double TongThanhTien { get => _tongThanhTien; set => _tongThanhTien = value; }
         public double SoNuocTieuThu { get => _soNuocTieuThu; set => _soNuocTieuThu = value; }
+        public int MaChiSo { get => _maChiSo; set => _maChiSo = value; }
+        public int MaGiaNuoc { get => _maGiaNuoc; set => _maGiaNuoc = value; }
     }
 }

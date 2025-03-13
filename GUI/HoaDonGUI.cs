@@ -223,12 +223,19 @@ namespace GUI
             txtHoaDonNam.Text = "";
             cboTrangThaiThanhToan.SelectedItem = null;
             checkbox_ngaylaphd.Checked = false;
+            HoaDonGUI_Load(sender, e);
         }
 
         private void btnTaoHoaDon_Click(object sender, EventArgs e)
         {
-            TaoHoaDonGUI taoHoaDonGUI = new TaoHoaDonGUI();
+            HoaDonGUI_Tao taoHoaDonGUI = new HoaDonGUI_Tao();
             taoHoaDonGUI.ShowDialog();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            HoaDonGUI_Sua hoaDonGUI_Sua = new HoaDonGUI_Sua();
+            hoaDonGUI_Sua.ShowDialog();
         }
     }
 }
