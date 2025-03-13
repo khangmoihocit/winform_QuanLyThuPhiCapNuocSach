@@ -45,6 +45,7 @@
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lblThongBao = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -162,7 +163,7 @@
             // btnTao
             // 
             this.btnTao.AutoSize = true;
-            this.btnTao.Location = new System.Drawing.Point(318, 332);
+            this.btnTao.Location = new System.Drawing.Point(318, 381);
             this.btnTao.Name = "btnTao";
             this.btnTao.Size = new System.Drawing.Size(89, 34);
             this.btnTao.TabIndex = 5;
@@ -173,7 +174,7 @@
             // btnLamMoi
             // 
             this.btnLamMoi.AutoSize = true;
-            this.btnLamMoi.Location = new System.Drawing.Point(440, 332);
+            this.btnLamMoi.Location = new System.Drawing.Point(440, 381);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(99, 34);
             this.btnLamMoi.TabIndex = 5;
@@ -184,7 +185,7 @@
             // btnHuy
             // 
             this.btnHuy.AutoSize = true;
-            this.btnHuy.Location = new System.Drawing.Point(582, 332);
+            this.btnHuy.Location = new System.Drawing.Point(582, 381);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(99, 34);
             this.btnHuy.TabIndex = 5;
@@ -196,11 +197,21 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // lblThongBao
+            // 
+            this.lblThongBao.AutoSize = true;
+            this.lblThongBao.ForeColor = System.Drawing.Color.Red;
+            this.lblThongBao.Location = new System.Drawing.Point(259, 291);
+            this.lblThongBao.Name = "lblThongBao";
+            this.lblThongBao.Size = new System.Drawing.Size(0, 24);
+            this.lblThongBao.TabIndex = 6;
+            // 
             // HoaDonGUI_Tao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(970, 428);
+            this.ClientSize = new System.Drawing.Size(970, 450);
+            this.Controls.Add(this.lblThongBao);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.btnTao);
@@ -246,5 +257,6 @@
         private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label lblThongBao;
     }
 }

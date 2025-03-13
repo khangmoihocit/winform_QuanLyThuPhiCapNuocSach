@@ -34,7 +34,7 @@ namespace GUI
 
         private void cboKhachHang_SelectedIndexChanged(object sender, EventArgs e)
         {
-            checkTextBox();
+            //checkTextBox();
         }
 
         private void btnTao_Click(object sender, EventArgs e)
@@ -61,7 +61,7 @@ namespace GUI
                 }
                 else
                 {
-                    MessageBox.Show("không có thông tin sử dụng nước khách hàng " + khachHangDTO.HoTen + " trong tháng: " + thang + " và năm: " + nam);
+                    lblThongBao.Text = "không có thông tin sử dụng nước khách hàng " + khachHangDTO.HoTen + " trong tháng: " + thang + " và năm: " + nam;
                     return;
                 }
                 
@@ -121,8 +121,6 @@ namespace GUI
                 return;
             }
             else errorProvider1.SetError(cboHinhThucThanhToan, "");
-
-
         }
 
         private void dtpNgayThanhToan_ValueChanged(object sender, EventArgs e)
@@ -146,7 +144,7 @@ namespace GUI
 
         private void txtThang_TextChanged(object sender, EventArgs e)
         {
-            checkTextBox();
+            //checkTextBox();
 
         }
     }
