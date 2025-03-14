@@ -25,24 +25,83 @@ namespace GUI
             this.taiKhoanDTO = taiKhoanDTO;
         }
 
+        private Form currentFormChild;
+
+
+        //mở form được truyền vô
+        private void openChildForm(Form childForm)
+        {
+            if (currentFormChild != null)
+            {
+                currentFormChild.Close();
+                currentFormChild.Dispose();  // Giải phóng tài nguyên
+            }
+
+            currentFormChild = childForm;
+
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+
+            panel_Body.Controls.Clear();
+            panel_Body.Controls.Add(childForm);
+            panel_Body.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+      
+
+        private void btnNhanVien_Click(object sender, EventArgs e)
+        {
+            ShowChildFormInGroupBox(Application.OpenForms["NhanVienGUI"] as NhanVienGUI ?? new NhanVienGUI());
+            openChildForm(new NhanVienGUI());
+            lblHeader.Text = "Quản lý nhân viên";
+
+        }
+
+        private void btnKhachHang_Click(object sender, EventArgs e)
+        {
+            ShowChildFormInGroupBox(Application.OpenForms["KhachHangGUI"] as KhachHangGUI ?? new KhachHangGUI());
+            lblHeader.Text = "Quản lý khách hàng";
+
+        }
+
+        private void btnQuanLySuDungNuoc_Click(object sender, EventArgs e)
+        {
+            ShowChildFormInGroupBox(Application.OpenForms["QuanLySuDungNuocGUI"] as QuanLySuDungNuocGUI ?? new QuanLySuDungNuocGUI());
+            lblHeader.Text = "Quản lý sử dụng nước";
+        }
+
+        private void btnHoaDon_Click(object sender, EventArgs e)
+        {
+            ShowChildFormInGroupBox(Application.OpenForms["HoaDonGUI"] as HoaDonGUI ?? new HoaDonGUI());
+            lblHeader.Text = "Quản lý hóa đơn";
+        }
+
+        private void btnThongkeVaBaocao_Click(object sender, EventArgs e)
+        {
+            ShowChildFormInGroupBox(Application.OpenForms["ThongKeBaoCaoGUI"] as ThongKeBaoCaoGUI ?? new ThongKeBaoCaoGUI());
+            lblHeader.Text = "Thống kê và báo cáo";
+        }
 
 
 
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
+            
+                    DialogResult result = MessageBox.Show("Bạn có muốn đăng xuất không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+                        this.Hide();
+                        DangNhapGUI dangNhapGUI = new DangNhapGUI();
+                        dangNhapGUI.ShowDialog();
+                    }
+                    else
+                    {
 
-            DialogResult result = MessageBox.Show("Bạn có muốn đăng xuất không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-                this.Hide();
-                DangNhapGUI dangNhapGUI = new DangNhapGUI();
-                dangNhapGUI.ShowDialog();
-            }
-            else
-            {
-
-            }
-        }
+                    }
+                }
 
         private void btnTongQuan_Click_1(object sender, EventArgs e)
         {
@@ -56,63 +115,36 @@ namespace GUI
 
         private void TrangChuGUI_Load_1(object sender, EventArgs e)
         {
-            //NhanVienDTO nhanVienDTO = nhanVienBUS.findById(taiKhoanDTO.MaNhanVien)[0];
-            //lblUsername.Text = "Xin chào! " + nhanVienDTO.HoTen;
+            NhanVienDTO nhanVienDTO = nhanVienBUS.findById(taiKhoanDTO.MaNhanVien)[0];
+            lblUsername.Text = "Xin chào! " + nhanVienDTO.HoTen;
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-            Form frm = null;
+        private Form currentChildForm = null; // Biến lưu Form con hiện tại
 
-            // Kiểm tra xem form đã mở chưa
-            foreach (Form childForm in this.MdiChildren)
+       
+
+        private void ShowChildFormInGroupBox(Form childForm)
+        {
+            if (currentChildForm != null)
             {
-                if ((e.ClickedItem.Name == "mnuNhanVien" && childForm is NhanVienGUI) ||
-                    (e.ClickedItem.Name == "mnuKhachHang" && childForm is KhachHangGUI) ||
-                    (e.ClickedItem.Name == "mnuQuanLySuDungNuoc" && childForm is QuanLySuDungNuocGUI) ||
-                    (e.ClickedItem.Name == "mnuHoaDon" && childForm is HoaDonGUI))
-                {
-                    childForm.BringToFront();
-                    return;
-                }
+                currentChildForm.Hide(); // Ẩn Form cũ nhưng không đóng
             }
 
-            // Nếu chưa mở, tạo mới form phù hợp
-            switch (e.ClickedItem.Name)
+            if (childForm == null || childForm.IsDisposed)
             {
-                case "mnuNhanVien":
-                    frm = new NhanVienGUI();
-                    break;
-                case "mnuKhachHang":
-                    frm = new KhachHangGUI();
-                    break;
-                case "mnuQuanLySuDungNuoc":
-                    frm = new QuanLySuDungNuocGUI();
-                    break;
-                case "mnuHoaDon":
-                    frm = new HoaDonGUI();
-                    break;
-                default:
-                    break;
+                childForm = new Form(); // Khởi tạo lại nếu Form đã bị đóng
             }
 
-            if (frm != null)
-            {
-                frm.MdiParent = this;
-                frm.WindowState = FormWindowState.Maximized;
-                frm.Show();
-                frm.BringToFront();
-            }
-        }
+            childForm.TopLevel = false; // Không phải cửa sổ độc lập
+            childForm.FormBorderStyle = FormBorderStyle.None; // Ẩn viền
+            childForm.Dock = DockStyle.Fill; // Tự động lấp đầy GroupBox
+            panel_Body.Controls.Clear(); // Xóa Form con cũ
+            panel_Body.Controls.Add(childForm); // Thêm Form con mới vào GroupBox
+            childForm.BringToFront(); // Đưa Form lên trên cùng
+            childForm.Show();
 
-        private void mnuHeThong_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void đăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
+            currentChildForm = childForm; // Lưu Form con hiện tại
         }
     }
+
 }
