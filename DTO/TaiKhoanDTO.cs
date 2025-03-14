@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace DTO
 {   
-    //hehe
     public class TaiKhoanDTO
     {
         private string _tenTaiKhoan;

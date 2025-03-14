@@ -128,5 +128,10 @@ namespace DAO.impl
 
             
         }
+
+        public void update(HoaDonDTO hoaDonDTO)
+        {
+            string query = "spHoaDon_Update";
+        }
     }
 }

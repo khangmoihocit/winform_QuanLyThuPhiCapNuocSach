@@ -99,6 +99,7 @@
             this.txtNam.Name = "txtNam";
             this.txtNam.Size = new System.Drawing.Size(252, 32);
             this.txtNam.TabIndex = 3;
+            this.txtNam.TextChanged += new System.EventHandler(this.txtNam_TextChanged);
             // 
             // label5
             // 
@@ -116,6 +117,7 @@
             this.txtGiaNuoc.ReadOnly = true;
             this.txtGiaNuoc.Size = new System.Drawing.Size(252, 32);
             this.txtGiaNuoc.TabIndex = 3;
+            this.txtGiaNuoc.TextChanged += new System.EventHandler(this.txtGiaNuoc_TextChanged);
             // 
             // label7
             // 
@@ -138,7 +140,7 @@
             this.cboHinhThucThanhToan.Name = "cboHinhThucThanhToan";
             this.cboHinhThucThanhToan.Size = new System.Drawing.Size(252, 32);
             this.cboHinhThucThanhToan.TabIndex = 1;
-            this.cboHinhThucThanhToan.SelectedIndexChanged += new System.EventHandler(this.cboKhachHang_SelectedIndexChanged);
+            this.cboHinhThucThanhToan.SelectedIndexChanged += new System.EventHandler(this.cboHinhThucThanhToan_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -201,7 +203,7 @@
             // 
             this.lblThongBao.AutoSize = true;
             this.lblThongBao.ForeColor = System.Drawing.Color.Red;
-            this.lblThongBao.Location = new System.Drawing.Point(259, 291);
+            this.lblThongBao.Location = new System.Drawing.Point(188, 290);
             this.lblThongBao.Name = "lblThongBao";
             this.lblThongBao.Size = new System.Drawing.Size(0, 24);
             this.lblThongBao.TabIndex = 6;

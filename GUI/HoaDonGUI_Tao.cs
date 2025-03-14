@@ -34,13 +34,19 @@ namespace GUI
 
         private void cboKhachHang_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //checkTextBox();
+            if (cboKhachHang.SelectedIndex == -1)
+            {
+                errorProvider1.SetError(cboKhachHang, "Vui lòng chọn khách hàng");
+                return;
+            }
+            else errorProvider1.SetError(cboKhachHang, "");
         }
 
         private void btnTao_Click(object sender, EventArgs e)
         {
-            checkTextBox();
+            if (!checkTextBox()) return;
             HoaDonDTO hoaDonDTO = new HoaDonDTO();
+
 
             int thang = int.Parse(txtThang.Text);
             int nam = int.Parse(txtNam.Text);
@@ -61,7 +67,7 @@ namespace GUI
                 }
                 else
                 {
-                    lblThongBao.Text = "không có thông tin sử dụng nước khách hàng " + khachHangDTO.HoTen + " trong tháng: " + thang + " và năm: " + nam;
+                    lblThongBao.Text = "Không có thông tin sử dụng nước của khách hàng " + khachHangDTO.HoTen + " trong tháng " + thang + " và năm " + nam;
                     return;
                 }
                 
@@ -89,38 +95,53 @@ namespace GUI
             {
                 cboKhachHang.Items.Add(item);
             }
-
+            txtGiaNuoc.Text = giaNuocBUS.findByNgayapdung((dtpNgayThanhToan.Value))[0].DonGia.ToString();
         }
 
-        public void checkTextBox()
+        public bool checkTextBox()
         {
             if (cboKhachHang.SelectedIndex == -1) 
             {
                 errorProvider1.SetError(cboKhachHang, "Vui lòng chọn khách hàng");
-                return;
+                return false;
             }
             else errorProvider1.SetError(cboKhachHang, "");
 
             if (txtThang.Text.Trim() == "")
             {
                 errorProvider1.SetError(txtThang, "Vui lòng nhập tháng");
-                return;
+                return false;
+
             }
-            else errorProvider1.SetError(cboKhachHang, "");
+            else errorProvider1.SetError(txtThang, "");
 
             if (txtNam.Text.Trim() == "")
             {
                 errorProvider1.SetError(txtNam, "Vui lòng nhập năm");
-                return;
+                return false;
+
             }
             else errorProvider1.SetError(txtNam, "");
 
             if (cboHinhThucThanhToan.SelectedIndex == -1)
             {
                 errorProvider1.SetError(cboHinhThucThanhToan, "Bạn chưa chọn hình thức thanh toán");
-                return;
+                return false;
+
             }
             else errorProvider1.SetError(cboHinhThucThanhToan, "");
+
+            if(txtGiaNuoc.Text.Trim() == "")
+            {
+                errorProvider1.SetError(txtGiaNuoc, "Vui lòng lòng chọn ngày thanh toán");
+                return false;
+
+            }
+            else
+            {
+                errorProvider1.SetError(txtGiaNuoc, "");
+            }
+            return true;
         }
 
         private void dtpNgayThanhToan_ValueChanged(object sender, EventArgs e)
@@ -144,7 +165,36 @@ namespace GUI
 
         private void txtThang_TextChanged(object sender, EventArgs e)
         {
-            //checkTextBox();
+            if (txtThang.Text.Trim() == "")
+            {
+                errorProvider1.SetError(txtThang, "Vui lòng nhập tháng");
+                return;
+            }
+            else errorProvider1.SetError(cboKhachHang, "");
+        }
+
+        private void txtNam_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNam.Text.Trim() == "")
+            {
+                errorProvider1.SetError(txtNam, "Vui lòng nhập năm");
+                return;
+            }
+            else errorProvider1.SetError(txtNam, "");
+        }
+
+        private void cboHinhThucThanhToan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboHinhThucThanhToan.SelectedIndex == -1)
+            {
+                errorProvider1.SetError(cboHinhThucThanhToan, "Bạn chưa chọn hình thức thanh toán");
+                return;
+            }
+            else errorProvider1.SetError(cboHinhThucThanhToan, "");
+        }
+
+        private void txtGiaNuoc_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

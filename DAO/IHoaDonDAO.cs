@@ -14,5 +14,6 @@ namespace DAO
         void deleteById(int id );
         DataTable findAll(Dictionary<string, object> param);
         void add(HoaDonDTO hoaDonDTO);
+        void update(HoaDonDTO hoaDonDTO);
     }
 }

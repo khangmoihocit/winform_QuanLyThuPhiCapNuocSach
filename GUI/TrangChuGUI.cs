@@ -30,19 +30,19 @@ namespace GUI
 
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
-            
-                    DialogResult result = MessageBox.Show("Bạn có muốn đăng xuất không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (result == DialogResult.Yes)
-                    {
-                        this.Hide();
-                        DangNhapGUI dangNhapGUI = new DangNhapGUI();
-                        dangNhapGUI.ShowDialog();
-                    }
-                    else
-                    {
 
-                    }
-                }
+            DialogResult result = MessageBox.Show("Bạn có muốn đăng xuất không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+                DangNhapGUI dangNhapGUI = new DangNhapGUI();
+                dangNhapGUI.ShowDialog();
+            }
+            else
+            {
+
+            }
+        }
 
         private void btnTongQuan_Click_1(object sender, EventArgs e)
         {
@@ -105,5 +105,14 @@ namespace GUI
             }
         }
 
+        private void mnuHeThong_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void đăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

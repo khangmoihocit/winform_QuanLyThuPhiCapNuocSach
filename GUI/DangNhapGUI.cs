@@ -66,7 +66,8 @@ namespace GUI
 
         private void DangNhapGUI_Load_1(object sender, EventArgs e)
         {
-
+            txtTaiKhoan.Text = "admin123";
+            txtMatKhau.Text = "admin123";
         }
 
         private void DangNhapGUI_FormClosed(object sender, FormClosedEventArgs e)

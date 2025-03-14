@@ -78,65 +78,6 @@ namespace GUI
             }
         }
 
-        //chuyển các textbox về đối tượng hóa đơn
-        private HoaDonDTO getValueTextBoxes()
-        {
-            HoaDonDTO hoaDonDTO = new HoaDonDTO();
-            hoaDonDTO.TenKhachHang = txtTenKhachHang.Text;
-            if (!string.IsNullOrEmpty(txtHoaDonThang.Text) && !string.IsNullOrEmpty(txtHoaDonNam.Text))
-            {
-                hoaDonDTO.HdThang = int.Parse(txtHoaDonThang.Text);
-                hoaDonDTO.HdNam = int.Parse(txtHoaDonNam.Text);
-            }
-
-            if (cboTrangThaiThanhToan.SelectedItem != null)
-            {
-                if (cboTrangThaiThanhToan.SelectedItem.ToString().Equals("Đã thanh toán"))
-                {
-                    hoaDonDTO.TrangThaiThanhToan = 1;
-                }
-                else
-                {
-                    hoaDonDTO.TrangThaiThanhToan = 0;
-                }
-            }
-
-            hoaDonDTO.NgayLapHD = dtpNgayLapHD.Value;
-            return hoaDonDTO;
-        }
-
-        //
-        private void btnTimKiem_Click(object sender, EventArgs e)
-        {
-            Dictionary<string, object> param = new Dictionary<string, object>();
-            param["@sHoTen"] = txtTenKhachHang.Text;
-            param["@iThang"] = txtHoaDonThang.Text;
-            param["@iNam"] = txtHoaDonNam.Text;
-            if (cboTrangThaiThanhToan.SelectedItem != null)
-            {
-                if (cboTrangThaiThanhToan.SelectedItem.ToString().Equals("Đã thanh toán"))
-                {
-                    param["@sTrangThai"] = 1;
-                }
-                else
-                {
-                    param["@sTrangThai"] = 0;
-                }
-            }
-
-            if (checkbox_ngaylaphd.Checked == true)
-            {
-                param["@dNgayLap"] = dtpNgayLapHD.Value.ToString("yyyy/MM/dd");
-            }
-            try
-            {
-                dgvHoaDon.DataSource = hoaDonBUS.findAll(param);
-            }
-            catch (DatabaseException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
 
         private void findAll()
         {
@@ -234,7 +175,28 @@ namespace GUI
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            HoaDonGUI_Sua hoaDonGUI_Sua = new HoaDonGUI_Sua();
+            if(dgvHoaDon.SelectedRows.Count < 0)
+            {
+                MessageBox.Show("Vui lòng chọn hóa đơn để sửa");
+                return;
+            }
+            HoaDonDTO hoaDonDTO = new HoaDonDTO();
+            hoaDonDTO.MaHoaDon = int.Parse(dgvHoaDon.SelectedRows[0].Cells[0].Value.ToString());
+            hoaDonDTO.TenKhachHang = dgvHoaDon.SelectedRows[0].Cells[1].Value.ToString();
+            hoaDonDTO.HdThang = int.Parse(dgvHoaDon.SelectedRows[0].Cells[2].Value.ToString());
+            hoaDonDTO.HdNam = int.Parse(dgvHoaDon.SelectedRows[0].Cells[3].Value.ToString());
+            hoaDonDTO.NgayLapHD = DateTime.Parse(dgvHoaDon.SelectedRows[0].Cells[4].Value.ToString());
+            hoaDonDTO.SoNuocTieuThu = float.Parse(dgvHoaDon.SelectedRows[0].Cells[5].Value.ToString());
+            hoaDonDTO.TongThanhTien = double.Parse(dgvHoaDon.SelectedRows[0].Cells[6].Value.ToString());
+            if(dgvHoaDon.SelectedRows[0].Cells[7].Value.ToString().Equals("đã thanh toán"))
+            {
+                hoaDonDTO.TrangThaiThanhToan = 1;
+            }
+            else
+            {
+                hoaDonDTO.TrangThaiThanhToan = 0;
+            }
+            HoaDonGUI_Sua hoaDonGUI_Sua = new HoaDonGUI_Sua(hoaDonDTO);
             hoaDonGUI_Sua.ShowDialog();
         }
 
@@ -247,13 +209,20 @@ namespace GUI
             {
                 int id = int.Parse(dgvHoaDon.SelectedRows[0].Cells[0].Value.ToString());
                 recordFilter = "{tblHoaDon.iMaHD} = " + id + " ";
+            }
+            else
+            {
 
-                MessageBox.Show(recordFilter);
             }
 
 
-            hoaDonReport.showReport(filePath, "", recordFilter);
+                hoaDonReport.showReport(filePath, "", recordFilter);
             hoaDonReport.Show();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
