@@ -54,6 +54,7 @@ namespace GUI
 
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
+            ShowChildFormInGroupBox(Application.OpenForms["NhanVienGUI"] as NhanVienGUI ?? new NhanVienGUI());
             openChildForm(new NhanVienGUI());
             lblHeader.Text = "Quản lý nhân viên";
 
@@ -61,26 +62,26 @@ namespace GUI
 
         private void btnKhachHang_Click(object sender, EventArgs e)
         {
-            openChildForm(new KhachHangGUI());
+            ShowChildFormInGroupBox(Application.OpenForms["KhachHangGUI"] as KhachHangGUI ?? new KhachHangGUI());
             lblHeader.Text = "Quản lý khách hàng";
 
         }
 
         private void btnQuanLySuDungNuoc_Click(object sender, EventArgs e)
         {
-            openChildForm(new QuanLySuDungNuocGUI());
+            ShowChildFormInGroupBox(Application.OpenForms["QuanLySuDungNuocGUI"] as QuanLySuDungNuocGUI ?? new QuanLySuDungNuocGUI());
             lblHeader.Text = "Quản lý sử dụng nước";
         }
 
         private void btnHoaDon_Click(object sender, EventArgs e)
         {
-            openChildForm(new HoaDonGUI());
+            ShowChildFormInGroupBox(Application.OpenForms["HoaDonGUI"] as HoaDonGUI ?? new HoaDonGUI());
             lblHeader.Text = "Quản lý hóa đơn";
         }
 
         private void btnThongkeVaBaocao_Click(object sender, EventArgs e)
         {
-            openChildForm(new ThongKeBaoCaoGUI());
+            ShowChildFormInGroupBox(Application.OpenForms["ThongKeBaoCaoGUI"] as ThongKeBaoCaoGUI ?? new ThongKeBaoCaoGUI());
             lblHeader.Text = "Thống kê và báo cáo";
         }
 
@@ -117,5 +118,33 @@ namespace GUI
             NhanVienDTO nhanVienDTO = nhanVienBUS.findById(taiKhoanDTO.MaNhanVien)[0];
             lblUsername.Text = "Xin chào! " + nhanVienDTO.HoTen;
         }
+
+        private Form currentChildForm = null; // Biến lưu Form con hiện tại
+
+       
+
+        private void ShowChildFormInGroupBox(Form childForm)
+        {
+            if (currentChildForm != null)
+            {
+                currentChildForm.Hide(); // Ẩn Form cũ nhưng không đóng
+            }
+
+            if (childForm == null || childForm.IsDisposed)
+            {
+                childForm = new Form(); // Khởi tạo lại nếu Form đã bị đóng
+            }
+
+            childForm.TopLevel = false; // Không phải cửa sổ độc lập
+            childForm.FormBorderStyle = FormBorderStyle.None; // Ẩn viền
+            childForm.Dock = DockStyle.Fill; // Tự động lấp đầy GroupBox
+            panel_Body.Controls.Clear(); // Xóa Form con cũ
+            panel_Body.Controls.Add(childForm); // Thêm Form con mới vào GroupBox
+            childForm.BringToFront(); // Đưa Form lên trên cùng
+            childForm.Show();
+
+            currentChildForm = childForm; // Lưu Form con hiện tại
+        }
     }
+
 }
