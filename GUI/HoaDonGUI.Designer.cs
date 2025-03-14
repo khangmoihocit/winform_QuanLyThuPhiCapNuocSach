@@ -158,6 +158,7 @@ namespace GUI
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm kiếm";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // checkbox_ngaylaphd
             // 
