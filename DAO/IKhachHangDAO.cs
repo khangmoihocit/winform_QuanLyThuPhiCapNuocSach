@@ -13,5 +13,9 @@ namespace DAO
         List<KhachHangDTO> command(string query);
         List<KhachHangDTO> getAll();
         DataTable getAllByDataTable();
+
+        DataTable KhachHangs();
+        void deleteById(int id);
+        DataTable findAll(Dictionary<string, object> param);
     }
 }

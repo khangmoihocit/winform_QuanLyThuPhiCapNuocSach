@@ -27,5 +27,7 @@ namespace BUS
         {
             return khachHangDAO.getAll();
         }
+        public void deleteById(int id) => khachHangDAO.deleteById(id);
+        public DataTable findAll(Dictionary<string, object> param) => khachHangDAO.findAll(param);
     }
 }

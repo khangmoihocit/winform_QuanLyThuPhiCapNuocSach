@@ -110,6 +110,7 @@ namespace GUI
             this.btnTimKiem.TabIndex = 13;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // btnXoa
             // 
@@ -144,8 +145,8 @@ namespace GUI
             // dtpNgayDangKy
             // 
             this.dtpNgayDangKy.CustomFormat = "dd/MM/yyyy";
-            this.dtpNgayDangKy.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpNgayDangKy.Location = new System.Drawing.Point(828, 73);
+            this.dtpNgayDangKy.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgayDangKy.Location = new System.Drawing.Point(828, 81);
             this.dtpNgayDangKy.Name = "dtpNgayDangKy";
             this.dtpNgayDangKy.Size = new System.Drawing.Size(162, 32);
             this.dtpNgayDangKy.TabIndex = 12;
@@ -190,7 +191,7 @@ namespace GUI
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(679, 81);
+            this.label5.Location = new System.Drawing.Point(681, 81);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(129, 24);
             this.label5.TabIndex = 4;
