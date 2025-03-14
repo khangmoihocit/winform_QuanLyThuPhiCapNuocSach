@@ -48,6 +48,7 @@ namespace GUI
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblHeader = new System.Windows.Forms.Label();
             this.panel_Body = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -55,6 +56,7 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel_Body.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -235,11 +237,22 @@ namespace GUI
             // panel_Body
             // 
             this.panel_Body.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel_Body.Controls.Add(this.groupBox1);
             this.panel_Body.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Body.Location = new System.Drawing.Point(216, 78);
             this.panel_Body.Name = "panel_Body";
             this.panel_Body.Size = new System.Drawing.Size(1393, 807);
             this.panel_Body.TabIndex = 4;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1393, 807);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
             // 
             // TrangChuGUI
             // 
@@ -268,6 +281,7 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel_Body.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -291,5 +305,6 @@ namespace GUI
         private Panel panel4;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
+        private GroupBox groupBox1;
     }
 }
