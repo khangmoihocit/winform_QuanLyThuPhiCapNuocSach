@@ -119,17 +119,17 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="txtTaiKhoan.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto, 12pt</value>
+    <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="txtTaiKhoan.Location" type="System.Drawing.Point, System.Drawing">
-    <value>225, 214</value>
+    <value>245, 223</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="txtTaiKhoan.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 3, 4, 3</value>
   </data>
   <data name="txtTaiKhoan.Size" type="System.Drawing.Size, System.Drawing">
-    <value>242, 32</value>
+    <value>264, 30</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="txtTaiKhoan.TabIndex" type="System.Int32, mscorlib">
@@ -148,10 +148,10 @@
     <value>6</value>
   </data>
   <data name="txtMatKhau.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto, 12pt</value>
+    <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="txtMatKhau.Location" type="System.Drawing.Point, System.Drawing">
-    <value>225, 277</value>
+    <value>245, 289</value>
   </data>
   <data name="txtMatKhau.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 3, 4, 3</value>
@@ -160,7 +160,7 @@
     <value>*</value>
   </data>
   <data name="txtMatKhau.Size" type="System.Drawing.Size, System.Drawing">
-    <value>242, 32</value>
+    <value>264, 30</value>
   </data>
   <data name="txtMatKhau.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -184,10 +184,10 @@
     <value>NoControl</value>
   </data>
   <data name="lklQuenMatKhau.Location" type="System.Drawing.Point, System.Drawing">
-    <value>105, 325</value>
+    <value>115, 339</value>
   </data>
   <data name="lklQuenMatKhau.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 24</value>
+    <value>157, 25</value>
   </data>
   <data name="lklQuenMatKhau.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -214,10 +214,10 @@
     <value>NoControl</value>
   </data>
   <data name="lklDangKy.Location" type="System.Drawing.Point, System.Drawing">
-    <value>437, 325</value>
+    <value>477, 339</value>
   </data>
   <data name="lklDangKy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 24</value>
+    <value>84, 25</value>
   </data>
   <data name="lklDangKy.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -244,13 +244,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnDangNhap.Location" type="System.Drawing.Point, System.Drawing">
-    <value>253, 468</value>
+    <value>276, 487</value>
   </data>
   <data name="btnDangNhap.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
   <data name="btnDangNhap.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 34</value>
+    <value>141, 35</value>
   </data>
   <data name="btnDangNhap.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -274,13 +274,13 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>151, 277</value>
+    <value>165, 289</value>
   </data>
   <data name="pictureBox3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 3, 4, 3</value>
   </data>
   <data name="pictureBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 35</value>
+    <value>44, 36</value>
   </data>
   <data name="pictureBox3.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
@@ -304,13 +304,13 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>151, 214</value>
+    <value>165, 223</value>
   </data>
   <data name="pictureBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 3, 4, 3</value>
   </data>
   <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 35</value>
+    <value>44, 36</value>
   </data>
   <data name="pictureBox2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
@@ -334,13 +334,13 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>240, 12</value>
+    <value>262, 12</value>
   </data>
   <data name="pictureBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 3, 4, 3</value>
   </data>
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 155</value>
+    <value>170, 161</value>
   </data>
   <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -367,22 +367,25 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>11, 24</value>
+    <value>12, 25</value>
   </data>
   <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>644, 538</value>
+    <value>703, 560</value>
   </data>
   <data name="lblThongBao.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="lblThongBao.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="lblThongBao.Location" type="System.Drawing.Point, System.Drawing">
-    <value>147, 386</value>
+    <value>160, 402</value>
   </data>
   <data name="lblThongBao.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 24</value>
+    <value>0, 25</value>
   </data>
   <data name="lblThongBao.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -400,7 +403,7 @@
     <value>0</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto, 12pt</value>
+    <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 3, 4, 3</value>

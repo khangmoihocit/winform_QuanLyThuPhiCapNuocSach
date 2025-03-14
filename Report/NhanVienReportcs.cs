@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Shared;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,18 +9,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CrystalDecisions.CrystalReports.Engine;
-using CrystalDecisions.Shared;
 
 namespace Report
 {
-    public partial class HoaDonReport: Form
+    public partial class NhanVienReportcs: Form
     {
-        public HoaDonReport()
+        public NhanVienReportcs()
         {
             InitializeComponent();
         }
-
         public void showReport(string reportFilePath, string reportTitle, string recordFilter)
         {
             ReportDocument rpt = new ReportDocument();
@@ -37,12 +36,7 @@ namespace Report
 
             rpt.RecordSelectionFormula = recordFilter;
             rpt.SummaryInfo.ReportTitle = reportTitle;
-            crystalReportViewer_Hoadon.ReportSource = rpt;
-        }
-
-        private void crystalReportViewer1_Load(object sender, EventArgs e)
-        {
-
+            crystalReportViewer1.ReportSource = rpt;
         }
     }
 }

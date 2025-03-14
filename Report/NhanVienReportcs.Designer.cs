@@ -1,6 +1,6 @@
 ﻿namespace Report
 {
-    partial class HoaDonReport
+    partial class NhanVienReportcs
     {
         /// <summary>
         /// Required designer variable.
@@ -28,22 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.crystalReportViewer_Hoadon = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.crystalReport_HoaDon1 = new Report.CrystalReport_HoaDon();
-            this.cachedCrystalReport_HoaDon1 = new Report.CachedCrystalReport_HoaDon();
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.SuspendLayout();
-            // 
-            // crystalReportViewer_Hoadon
-            // 
-            this.crystalReportViewer_Hoadon.ActiveViewIndex = -1;
-            this.crystalReportViewer_Hoadon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crystalReportViewer_Hoadon.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer_Hoadon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crystalReportViewer_Hoadon.Location = new System.Drawing.Point(0, 0);
-            this.crystalReportViewer_Hoadon.Name = "crystalReportViewer_Hoadon";
-            this.crystalReportViewer_Hoadon.Size = new System.Drawing.Size(986, 681);
-            this.crystalReportViewer_Hoadon.TabIndex = 0;
             // 
             // crystalReportViewer1
             // 
@@ -53,28 +39,23 @@
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(986, 681);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(800, 450);
             this.crystalReportViewer1.TabIndex = 0;
-            this.crystalReportViewer1.Load += new System.EventHandler(this.crystalReportViewer1_Load);
             // 
-            // HoaDonReport
+            // NhanVienReportcs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(986, 681);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.crystalReportViewer1);
-            this.Name = "HoaDonReport";
-            this.Text = "HoaDonReport";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Name = "NhanVienReportcs";
+            this.Text = "NhanVienReportcs";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer_Hoadon;
-        private CrystalReport_HoaDon crystalReport_HoaDon1;
-        private CachedCrystalReport_HoaDon cachedCrystalReport_HoaDon1;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
     }
 }

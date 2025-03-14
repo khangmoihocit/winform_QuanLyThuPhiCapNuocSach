@@ -170,29 +170,21 @@ namespace DAO.Impl
         public DataTable getAllByDataTable()
         {
             string query = "spKhachHang_Get";
-            try
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
             {
-                using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+                sqlConnection.Open();
+                using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
                 {
-                    sqlConnection.Open();
-                    using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                    sqlCommand.CommandType = CommandType.StoredProcedure;
+                    using (SqlDataAdapter dataAdapter = new SqlDataAdapter(sqlCommand))
                     {
-                        sqlCommand.CommandType = CommandType.StoredProcedure;
-                        using (SqlDataAdapter dataAdapter = new SqlDataAdapter(sqlCommand))
-                        {
-                            DataTable dataTable = new DataTable();
-                            dataAdapter.Fill(dataTable);
-                            return dataTable;
-                        }
+                        DataTable dataTable = new DataTable();
+                        dataAdapter.Fill(dataTable);
+                        return dataTable;
                     }
-                    sqlConnection.Close();
                 }
+                sqlConnection.Close();
             }
-            catch (Exception ex)
-            {
-                throw new DatabaseException("Lỗi: " + ex.Message);
-            }
-
         }
 
         public DataTable KhachHangs()

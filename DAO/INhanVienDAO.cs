@@ -14,5 +14,8 @@ namespace DAO
         List<NhanVienDTO> getAll();
         List<NhanVienDTO> findById(int maNhanVien);
         DataTable getAllByTable();
+        DataTable NHanViens();
+        void deleteById(int id);
+        DataTable findAll(Dictionary<string, object> param);
     }
 }
