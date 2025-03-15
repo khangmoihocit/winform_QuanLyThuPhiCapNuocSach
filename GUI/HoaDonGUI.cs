@@ -215,8 +215,7 @@ namespace GUI
 
             }
 
-
-                hoaDonReport.showReport(filePath, "", recordFilter);
+            hoaDonReport.showReport(filePath, "", recordFilter);
             hoaDonReport.Show();
         }
 

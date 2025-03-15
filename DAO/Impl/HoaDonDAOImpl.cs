@@ -78,6 +78,7 @@ namespace DAO.impl
                             if (!string.IsNullOrEmpty(item.Value.ToString()))
                             {
                                 sqlCommand.Parameters.AddWithValue(item.Key, item.Value.ToString());
+                                
                             }
                         }
 
